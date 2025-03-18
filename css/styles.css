@@ -134,6 +134,16 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
+    background-color: white; 
+}
+
+.stickyheader {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Penting untuk mencegah elemen lain menutupi header */
+    background-color: white; /* Atur warna latar belakang agar konten di bawahnya tidak terlihat */
+    /* Tambahan styling sesuai kebutuhan Anda */
+    /*  Misalnya: padding: 10px;  */
 }
 
 .header-title h1 {
@@ -186,6 +196,17 @@ body {
     justify-content: center;
 }
 
+.love-icon {
+    fill: red; /* Warna hati menjadi merah */
+    margin: 0 5px; /* Tambahkan sedikit spasi di sekitar hati */
+    vertical-align: middle; /* Agar sejajar vertikal dengan teks */
+}
+
+h4 i {
+color: red; /* Warna hati menjadi merah */
+margin: 0 5px; /* Tambahkan sedikit spasi di sekitar hati */
+}
+  
 .metrics-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

@@ -1,11 +1,11 @@
 $(document).ready(() => {
     // URL API
-    const apiUrl = 'https://opendata.bandung.go.id/api/bigdata/kecamatan_regol/jmlh-rlss-nggrn-pppk-brdsrkn-klrhn-d-kcmtn-rgl-kt-bndng?sort=id%3Aasc&page=1&per_page=100&where=%7B%22bps_kode_desa_kelurahan%22%3A%5B%223273060007%22%5D%7D&where_or=%7B%7D';
+    const apiUrlPIPPK = 'https://opendata.bandung.go.id/api/bigdata/kecamatan_regol/jmlh-rlss-nggrn-pppk-brdsrkn-klrhn-d-kcmtn-rgl-kt-bndng?sort=id%3Aasc&page=1&per_page=100&where=%7B%22bps_kode_desa_kelurahan%22%3A%5B%223273060007%22%5D%7D&where_or=%7B%7D';
 
     // Fungsi untuk mengambil data dari API
     function fetchData() {
       return $.ajax({
-        url: apiUrl,
+        url: apiUrlPIPPK,
         method: 'GET'
       });
     }
@@ -78,9 +78,10 @@ $(document).ready(() => {
     // Fungsi untuk membuat tabel data
     function createDataTable(data) {
       $('#tabel-pippk').DataTable({
+        width: '100%',
         responsive: true,
         data: data,
-        length: 5,
+        pageLength: 5,
         columns: [
           { data: 'tahun'},
           { data: 'lkk'},
@@ -91,15 +92,11 @@ $(document).ready(() => {
         buttons: [
           'copy', 'csv', 'excel', 'pdf', 'print'
         ],
-        scrollX: true, // Aktifkan scroll horizontal
-        autoWidth: true, // Nonaktifkan auto width
+        scrollX: false, // Aktifkan scroll horizontal
+        autoWidth: false, // Nonaktifkan auto width
         language: {
             search: "Cari:",
-            lengthMenu: "Tampilkan _MENU_ data per halaman",
             zeroRecords: "Tidak ada data yang cocok",
-            info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
-            infoEmpty: "Tidak ada data yang tersedia",
-            infoFiltered: "(difilter dari _MAX_ total data)",
             paginate: {
                 first: "Pertama",
                 last: "Terakhir",
