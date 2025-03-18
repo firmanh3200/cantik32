@@ -41,7 +41,7 @@
             <header class="main-header">
                 <div class="header-title">
                     <h1>Statistik Kelurahan Balong Gede</h1>
-                    <p>Visualisasi Data Kelurahan</p>
+                    <p>~ Kelurahan Cinta Statistik ~</p>
                 </div>
                 <div class="header-actions">
                     <div class="date-filter">
@@ -77,16 +77,6 @@
                             <li data-page="infrastruktur" class="dropdown-item"><i class="fas fa-map-marked-alt"></i> Infrastruktur</li>
                         </ul>
                     </div>
-                    <!--
-                    <div class="profile">
-                        <div class="avatar">
-                            <svg viewBox="0 0 24 24" width="32" height="32">
-                                <circle cx="12" cy="8" r="5" fill="currentColor"/>
-                                <path d="M3 21a9 9 0 0118 0H3z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                    -->
                 </div>
             </header>
             <hr>
@@ -550,214 +540,12 @@
 
                 <!-- Bab Penduduk -->
                 <div class="page" id="penduduk-page">
-                    <header class="header">
-                        <div class="header-title text-center">
-                            <h1>Bidang Kependudukan</h1>
-                        </div>
-                    </header>
-                    <br>
-                    <div class="penduduk-stats-section">
-                        <div class="datatable-container">
-                            <div class="penduduk-stats-grid">
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-primary">
-                                        <i class="fas fa-home"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Kepala Keluarga</h4>
-                                        <p class="big-number">2.935</p>
-                                        <p class="small-info">Rata-rata 2.8 jiwa/KK</p>
-                                    </div>
-                                </div>
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-success">
-                                        <i class="fas fa-user-plus"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Penduduk</h4>
-                                        <p class="big-number">8.184</p>
-                                        <p class="small-info">-0,62% dari tahun lalu</p>
-                                    </div>
-                                </div>
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-danger">
-                                        <i class="fas fa-user-minus"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Kematian</h4>
-                                        <p class="big-number">39</p>
-                                        <p class="small-info">
-                                            
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-info">
-                                        <i class="fas fa-globe"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Migrasi Netto</h4>
-                                        <p class="big-number">+27</p>
-                                        <p class="small-info">Pendatang baru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <iframe src="lapduk.html" width="100%" height="600" style="border:0;">
 
-                    <div class="penduduk-highlights">
-                        <div class="stats-detail-grid">
-                            <div class="stats-detail-card">
-                                <h3>Komposisi Penduduk</h3>
-                                <div id="komposisiPendudukChart" class="chart"></div>
-                            </div>
-                            <div class="stats-detail-card">
-                                <h3>Perkembangan Bulanan</h3>
-                                <div id="perkembanganBulananChart" class="chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="penduduk-demografis">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Profil Demografis</h3>
-                            </div>
-                            <div class="demografis-grid">
-                                <div class="demografis-card">
-                                    <h4>Struktur Umur</h4>
-                                    <ul>
-                                        <li>0-17 tahun: 25%</li>
-                                        <li>18-35 tahun: 35%</li>
-                                        <li>36-55 tahun: 25%</li>
-                                        <li>56+ tahun: 15%</li>
-                                    </ul>
-                                </div>
-                                <div class="demografis-card">
-                                    <h4>Status Perkawinan</h4>
-                                    <ul>
-                                        <li>Kawin: 65%</li>
-                                        <li>Belum Kawin: 20%</li>
-                                        <li>Cerai Hidup: 10%</li>
-                                        <li>Cerai Mati: 5%</li>
-                                    </ul>
-                                </div>
-                                <div class="demografis-card">
-                                    <h4>Tingkat Pendidikan</h4>
-                                    <ul>
-                                        <li>Tidak Sekolah: 10%</li>
-                                        <li>SD: 22%</li>
-                                        <li>SMP: 38%</li>
-                                        <li>SMA: 13%</li>
-                                        <li>Perguruan Tinggi: 17%</li>
-                                    </ul>
-                                </div>
-                                <div class="demografis-card">
-                                    <h4>Pekerjaan</h4>
-                                    <ul>
-                                        <li>Petani: 35%</li>
-                                        <li>Wiraswasta: 25%</li>
-                                        <li>Buruh: 20%</li>
-                                        <li>PNS/TNI/Polri: 10%</li>
-                                        <li>Lainnya: 10%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="penduduk-stats-section">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Statistik Kependudukan</h3>
-                                <div class="datatable-actions">
-                                    <button class="btn-primary"><i class="fas fa-file-export"></i> Cetak Laporan</button>
-                                </div>
-                            </div>
-                            <div class="penduduk-stats-grid">
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-primary">
-                                        <i class="fas fa-home"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Total KK</h4>
-                                        <p class="big-number">983</p>
-                                        <p class="small-info">Rata-rata 3.8 jiwa/KK</p>
-                                    </div>
-                                </div>
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-success">
-                                        <i class="fas fa-user-plus"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Kelahiran</h4>
-                                        <p class="big-number">42</p>
-                                        <p class="small-info">+5% dari tahun lalu</p>
-                                    </div>
-                                </div>
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-danger">
-                                        <i class="fas fa-user-minus"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Kematian</h4>
-                                        <p class="big-number">18</p>
-                                        <p class="small-info">-8% dari tahun lalu</p>
-                                    </div>
-                                </div>
-                                <div class="stats-box">
-                                    <div class="stats-box-icon bg-info">
-                                        <i class="fas fa-globe"></i>
-                                    </div>
-                                    <div class="stats-box-content">
-                                        <h4>Migrasi Netto</h4>
-                                        <p class="big-number">+24</p>
-                                        <p class="small-info">Pendatang baru</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="penduduk-maps-section">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Sebaran dan Kepadatan Penduduk</h3>
-                                <div class="datatable-actions">
-                                    <button class="btn-primary"><i class="fas fa-layer-group"></i> Detail Peta</button>
-                                </div>
-                            </div>
-                            <div class="penduduk-map-container">
-                                <div id="pendudukMap" class="desa-map-large">
-                                    <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; background: rgba(255,255,255,0.8); border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px;">
-                                        <svg width="60" height="60" viewBox="0 0 24 24">
-                                            <path fill="#4e73df" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                        </svg>
-                                        <h3 style="margin: 10px 0; font-size: 16px; color: #5a5c69;">Peta Sebaran Penduduk</h3>
-                                        <p style="margin: 0; text-align: center; font-size: 14px; color: #858796;">Visualisasi sebaran penduduk per wilayah</p>
-                                    </div>
-                                </div>
-                                <div class="map-legend">
-                                    <h4>Kepadatan Penduduk</h4>
-                                    <div class="legend-item">
-                                        <span class="legend-color" style="background-color: #FFEDA0"></span>
-                                        <span>< 50 jiwa/km²</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color" style="background-color: #FEB24C"></span>
-                                        <span>50-100 jiwa/km²</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <span class="legend-color" style="background-color: #F03B20"></span>
-                                        <span>> 100 jiwa/km²</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </iframe>
 
                     <footer class="main-footer">
-                        <p>&copy; 2024 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede, Kecamatan Regol, Kota Bandung. Semua hak dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1215,7 +1003,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2024 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede, Kecamatan Regol, Kota Bandung. Semua hak dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1613,7 +1401,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2024 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede, Kecamatan Regol, Kota Bandung. Semua hak dilindungi.</p>
                     </footer>
                 </div>
 
