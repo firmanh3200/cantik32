@@ -186,6 +186,13 @@ body {
     justify-content: center;
 }
 
+.metrics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 /* Metrics Row Styles */
 .metrics-row {
     display: grid;
@@ -728,6 +735,7 @@ body {
 
 .trend.positive:before {
     content: '\f062';
+    /* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
 }
@@ -738,6 +746,7 @@ body {
 
 .trend.negative:before {
     content: '\f063';
+    /* biome-ignore lint/a11y/useGenericFontNames: <explanation> */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
 }

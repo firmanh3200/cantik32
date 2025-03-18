@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDA 3200</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Kelurahan Cinta Statistik</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <style>
         /* Additional styles for mobile sidebar dropdown */
         .sidebar-dropdown {
@@ -40,8 +40,8 @@
             <!-- Header with Sidebar Dropdown -->
             <header class="main-header">
                 <div class="header-title">
-                    <h1>Statistik Jawa Barat</h1>
-                    <p>Visualisasi Data Jawa Barat Dalam Angka</p>
+                    <h1>Statistik Kelurahan Balong Gede</h1>
+                    <p>Visualisasi Data Kelurahan</p>
                 </div>
                 <div class="header-actions">
                     <div class="date-filter">
@@ -59,7 +59,7 @@
                             <svg class="logo" viewBox="0 0 24 24" width="24" height="24">
                                 <path d="M12 2L3 9v12h18V9L12 2zm0 3.5L18 9H6l6-3.5zM7 11h2v6H7v-6zm4 0h2v6h-2v-6zm4 0h2v6h-2v-6z" fill="currentColor"/>
                             </svg>
-                            B A B
+                            Menu
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="sidebarDropdown">
                             <li data-page="dashboard" class="dropdown-item active"><i class="fas fa-home"></i> Dashboard</li>
@@ -256,59 +256,130 @@
 
                     <!-- Footer -->
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
-                <!-- Geografi Page -->
+                <!-- Bab Geografi -->
                 <div class="page" id="geografi-page">
                     <header class="header">
                         <div class="header-title text-center">
                             <h1>Geografi dan Iklim</h1>
                         </div>
-                        <div class="header-actions">
-                            <div class="date-filter">
-                                <label for="geografi-year-select">Tahun:</label>
-                                <select id="geografi-year-select">
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                </select>
+                    </header>
+                    <br>
+                    <!-- Metrics -->
+                    <div class="metrics-container">
+                        <div class="metric-card">
+                            <div class="metric-icon bg-primary">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Tinggi Wilayah</h3>
+                                <h2>704 mdpl</h2>
+                                <p class="metric-trend positive"> tertinggi di Kecamatan Regol</p>
                             </div>
                         </div>
-                    </header>
-                    
-                    <div class="datatable-container">
-                        <div class="datatable-header">
-                            <h3>Peta Topografi Desa</h3>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-success">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Luas Wilayah</h3>
+                                <h2>0,55 km²</h2>
+                                <p class="metric-trend positive">11,6% dari total luas Kecamatan Regol</p>
+                            </div>
                         </div>
-                        <div class="desa-map-large" id="topografiMap">
-                            <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; background: rgba(255,255,255,0.8); border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px;">
-                                <svg width="60" height="60" viewBox="0 0 24 24">
-                                    <path fill="#4e73df" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                                <h3 style="margin: 10px 0; font-size: 16px; color: #5a5c69;">Peta Topografi Desa</h3>
-                                <p style="margin: 0; text-align: center; font-size: 14px; color: #858796;">Peta interaktif topografi wilayah desa</p>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-warning">
+                                <i class="fas fa-house-user"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Jarak ke Ibukota kecamatan</h3>
+                                <h2>3,7 km</h2>
+                                <p class="metric-trend positive"> terjauh di Regol</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-info">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Jarak ke Ibukota Bandung</h3>
+                                <h2>2,7 km</h2>
+                                <p class="metric-trend positive"> terdekat di Regol</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stats-detail-grid">
                         <div class="stats-detail-card">
-                            <h3>Curah Hujan Bulanan</h3>
+                            <h3>Curah Hujan Bulanan di Kota Bandung</h3>
                             <div id="curahHujanChart" class="chart"></div>
                         </div>
                         <div class="stats-detail-card">
-                            <h3>Suhu Rata-rata Bulanan</h3>
+                            <h3>Suhu Rata-rata Bulanan di Kota Bandung</h3>
                             <div id="suhuRataRataChart" class="chart"></div>
                         </div>
                     </div>
                     
+                    <!-- Metrics -->
+                    <div class="metrics-container">
+                        <div class="metric-card">
+                            <div class="metric-icon bg-primary">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Batas Utara</h3>
+                                <h5>Kelurahan Braga</h5>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-success">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Batas Selatan</h3>
+                                <h5>Kelurahan Pungkur dan Kelurahan Ciateul</h5>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-warning">
+                                <i class="fas fa-house-user"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Batas Timur</h3>
+                                <h5>Kelurahan Cikawao</h5>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-info">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Batas Barat</h3>
+                                <h5>Kelurahan Karang Anyar</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="datatable-container">
+                        <div class="datatable-header">
+                            <h3>Peta Kelurahan</h3>
+                        </div>
+                        <div class="desa-map-large">
+                            <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; background: rgba(255,255,255,0.8); border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px;">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13322.156655402494!2d107.5998139164579!3d-6.9263146021664355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e627df2ca481%3A0x3110557dfe86190f!2sBalonggede%2C%20Regol%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1742264117385!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
-                <!-- Pemerintahan Page -->
+                <!-- Bab Pemerintahan -->
                 <div class="page" id="pemerintahan-page">
                     <header class="header">
                         <div class="header-title text-center">
@@ -316,135 +387,233 @@
                         </div>
                     </header>
                     <br>
+                    <!-- Metrics -->
+                    <div class="metrics-container">
+                        <div class="metric-card">
+                            <div class="metric-icon bg-primary">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Kode Desa (Kode PUM)</h3>
+                                <h2>3273111004</h2>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-success">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Kode Wilkerstat BPS</h3>
+                                <h2>3273060007</h2>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-warning">
+                                <i class="fas fa-house-user"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Tahun Pembentukan</h3>
+                                <h2>1985</h2>
+                                <p class="metric-trend positive"> Perda No. 6 Tahun 2006</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-info">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Klasifikasi</h3>
+                                <h2>Swasembada</h2>
+                                <p class="metric-trend positive"> Kategori Kelurahan: Madya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Metrics -->
+                    <div class="metrics-container">
+                        <div class="metric-card">
+                            <div class="metric-icon bg-primary">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Rukun Warga</h3>
+                                <h2>7 RW</h2>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-success">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Rukun Tetangga</h3>
+                                <h2>45 RT</h2>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-warning">
+                                <i class="fas fa-house-user"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Pegawai Laki-laki</h3>
+                                <h2>4</h2>
+                                <p class="metric-trend positive"> Pegawai Negeri Sipil (PNS)</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-info">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="metric-details">
+                                <h3>Pegawai Perempuan</h3>
+                                <h2>1</h2>
+                                <p class="metric-trend positive"> Pegawai Negeri Sipil (PNS)</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="pemerintahan-grid">
-                        <div class="pemerintahan-card">
-                            <h3>Program Prioritas</h3>
-                            <div id="programPrioritasChart" class="chart"></div>
-                        </div>
-                        <div class="pemerintahan-card">
-                            <h3>Realisasi Anggaran</h3>
-                            <div id="anggaranRealisasiChart" class="chart"></div>
-                        </div>
                         <div class="pemerintahan-card wide-card">
-                            <h3>Pelayanan Publik</h3>
-                            <div class="service-stats-container">
-                                <div class="service-stat">
-                                    <div class="service-icon">
-                                        <i class="fas fa-id-card"></i>
-                                    </div>
-                                    <div class="service-details">
-                                        <h4>Administrasi Kependudukan</h4>
-                                        <div class="service-progress-container">
-                                            <div class="service-progress" style="width: 92%"></div>
-                                        </div>
-                                        <p>92% kepuasan masyarakat</p>
-                                    </div>
+                            <h3>Realisasi PIPPK</h3>
+                            <div id="pippk-chart" class="chart"></div>
+                        </div>
+                    </div>
+
+                    <div class="pemerintahan-card wide-card">
+                        <h3>Pelayanan Publik</h3>
+                        <div class="service-stats-container">
+                            <div class="service-stat">
+                                <div class="service-icon">
+                                    <i class="fas fa-id-card"></i>
                                 </div>
-                                <div class="service-stat">
-                                    <div class="service-icon">
-                                        <i class="fas fa-file-alt"></i>
+                                <div class="service-details">
+                                    <h4>Administrasi Kependudukan</h4>
+                                    <div class="service-progress-container">
+                                        <div class="service-progress" style="width: 92%"></div>
                                     </div>
-                                    <div class="service-details">
-                                        <h4>Perizinan</h4>
-                                        <div class="service-progress-container">
-                                            <div class="service-progress" style="width: 87%"></div>
-                                        </div>
-                                        <p>87% kepuasan masyarakat</p>
-                                    </div>
+                                    <p>...% kepuasan masyarakat</p>
                                 </div>
-                                <div class="service-stat">
-                                    <div class="service-icon">
-                                        <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="service-stat">
+                                <div class="service-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Perizinan</h4>
+                                    <div class="service-progress-container">
+                                        <div class="service-progress" style="width: 87%"></div>
                                     </div>
-                                    <div class="service-details">
-                                        <h4>Bantuan Sosial</h4>
-                                        <div class="service-progress-container">
-                                            <div class="service-progress" style="width: 89%"></div>
-                                        </div>
-                                        <p>89% kepuasan masyarakat</p>
+                                    <p>...% kepuasan masyarakat</p>
+                                </div>
+                            </div>
+                            <div class="service-stat">
+                                <div class="service-icon">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Bantuan Sosial</h4>
+                                    <div class="service-progress-container">
+                                        <div class="service-progress" style="width: 89%"></div>
                                     </div>
+                                    <p>...% kepuasan masyarakat</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="agenda-section">
-                        <h2>Agenda Kegiatan Pemerintah Desa</h2>
-                        <div class="agenda-timeline">
-                            <div class="agenda-item">
-                                <div class="agenda-date">
-                                    <span class="month">JAN</span>
-                                    <span class="day">15</span>
-                                </div>
-                                <div class="agenda-content">
-                                    <h4>Musyawarah Rencana Pembangunan Desa</h4>
-                                    <p>Balai Desa, 09:00 WIB</p>
-                                </div>
+                    <br>
+                    <div class="datatable-section">
+                        <div class="datatable-container">
+                            <div class="datatable-header">
+                                <h3>Realisasi Program Inovasi Pembangunan dan Pemberdayaan Kewilayahan (PIPPK)</h3>
                             </div>
-                            <div class="agenda-item">
-                                <div class="agenda-date">
-                                    <span class="month">MAR</span>
-                                    <span class="day">22</span>
-                                </div>
-                                <div class="agenda-content">
-                                    <h4>Sosialisasi Program Kesehatan Masyarakat</h4>
-                                    <p>Puskesmas Desa, 10:00 WIB</p>
-                                </div>
-                            </div>
-                            <div class="agenda-item">
-                                <div class="agenda-date">
-                                    <span class="month">JUN</span>
-                                    <span class="day">05</span>
-                                </div>
-                                <div class="agenda-content">
-                                    <h4>Pelatihan Kewirausahaan Warga</h4>
-                                    <p>Aula Serbaguna, 13:00 WIB</p>
-                                </div>
-                            </div>
+                            
+                            <table id="tabel-pippk" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tahun</th>
+                                        <th>Lembaga Kemasyarakatan Kelurahan (LKK)</th>
+                                        <th>Jenis Anggaran</th>
+                                        <th>Nilai (Rp)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be populated by JavaScript -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-
+                    
+                    
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
-                <!-- Penduduk Page -->
+                <!-- Bab Penduduk -->
                 <div class="page" id="penduduk-page">
                     <header class="header">
                         <div class="header-title text-center">
                             <h1>Bidang Kependudukan</h1>
                         </div>
-                        <div class="header-actions">
-                            <div class="date-filter">
-                                <label for="penduduk-year-select">Tahun:</label>
-                                <select id="penduduk-year-select">
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                </select>
+                    </header>
+                    <br>
+                    <div class="penduduk-stats-section">
+                        <div class="datatable-container">
+                            <div class="penduduk-stats-grid">
+                                <div class="stats-box">
+                                    <div class="stats-box-icon bg-primary">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="stats-box-content">
+                                        <h4>Kepala Keluarga</h4>
+                                        <p class="big-number">2.935</p>
+                                        <p class="small-info">Rata-rata 2.8 jiwa/KK</p>
+                                    </div>
+                                </div>
+                                <div class="stats-box">
+                                    <div class="stats-box-icon bg-success">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="stats-box-content">
+                                        <h4>Penduduk</h4>
+                                        <p class="big-number">8.184</p>
+                                        <p class="small-info">-0,62% dari tahun lalu</p>
+                                    </div>
+                                </div>
+                                <div class="stats-box">
+                                    <div class="stats-box-icon bg-danger">
+                                        <i class="fas fa-user-minus"></i>
+                                    </div>
+                                    <div class="stats-box-content">
+                                        <h4>Kematian</h4>
+                                        <p class="big-number">39</p>
+                                        <p class="small-info">
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="stats-box">
+                                    <div class="stats-box-icon bg-info">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="stats-box-content">
+                                        <h4>Migrasi Netto</h4>
+                                        <p class="big-number">+27</p>
+                                        <p class="small-info">Pendatang baru</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </header>
+                    </div>
 
                     <div class="penduduk-highlights">
                         <div class="stats-detail-grid">
                             <div class="stats-detail-card">
                                 <h3>Komposisi Penduduk</h3>
                                 <div id="komposisiPendudukChart" class="chart"></div>
-                                <div class="chart-details">
-                                    <p>Total penduduk: 3,721</p>
-                                    <p>Laki-laki: 1,793 (48.2%)</p>
-                                    <p>Perempuan: 1,928 (51.8%)</p>
-                                </div>
                             </div>
                             <div class="stats-detail-card">
                                 <h3>Perkembangan Bulanan</h3>
                                 <div id="perkembanganBulananChart" class="chart"></div>
-                                <div class="chart-details">
-                                    <p>Pertumbuhan rata-rata: 15 orang/bulan</p>
-                                    <p>Kelahiran: 42 bayi</p>
-                                    <p>Kematian: 18 orang</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -740,7 +909,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -867,7 +1036,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1145,7 +1314,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1241,7 +1410,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1519,7 +1688,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1644,7 +1813,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1794,7 +1963,7 @@
                     </div>
 
                     <footer class="main-footer">
-                        <p>&copy; 2023 Dashboard Perkembangan Desa. Semua hak dilindungi.</p>
+                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1806,25 +1975,26 @@
     <script type="importmap">
     {
         "imports": {
-            "apexcharts": "https://cdn.jsdelivr.net/npm/apexcharts@3.42.0/dist/apexcharts.esm.js"
+            "apexcharts": "js/apexcharts.esm.js"
         }
     }
     </script>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.42.0/dist/apexcharts.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script src="js/dataTables.buttons.min.js"></script>
+    <script src="js/buttons.bootstrap5.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/buttons.html5.min.js"></script>
+    <script src="js/buttons.print.min.js"></script>
+    <script src="js/buttons.colVis.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pippk.js"></script>
 </body>
 </html>

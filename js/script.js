@@ -1,11 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     // Page Navigation System
     const menuItems = document.querySelectorAll('.sidebar-dropdown .dropdown-item');
     const pages = document.querySelectorAll('.page');
     
     function switchToPage(pageId) {
         // Remove active class from all menu items and pages
-        menuItems.forEach(item => item.classList.remove('active'));
+        // biome-ignore lint/complexity/noForEach: <explanation>
+                menuItems.forEach(item => item.classList.remove('active'));
+        // biome-ignore lint/complexity/noForEach: <explanation>
         pages.forEach(page => page.classList.remove('active'));
         
         // Find and activate the selected menu item
@@ -79,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Add click event to menu items
-    menuItems.forEach(item => {
+    // biome-ignore lint/complexity/noForEach: <explanation>
+            menuItems.forEach(item => {
         item.addEventListener('click', function() {
             const pageId = this.getAttribute('data-page');
             switchToPage(pageId);
@@ -99,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.querySelector('.sidebar');
     
     if (sidebarHeader && sidebar) {
-        sidebarHeader.addEventListener('click', function() {
+        sidebarHeader.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 sidebar.classList.toggle('expanded');
             }
@@ -165,7 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('pertanian-year-select')
     ];
     
-    yearSelectElements.forEach(yearSelect => {
+    // biome-ignore lint/complexity/noForEach: <explanation>
+        yearSelectElements.forEach(yearSelect => {
         if (yearSelect) {
             // Add 2024 option if not already present
             if (yearSelect.options.length < 2 || yearSelect.options[0].value !== '2024') {
@@ -193,19 +197,27 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update metrics
         const metrics = yearData[year].metrics;
         document.querySelector('.population .metric-value').textContent = metrics.population.value;
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.population .metric-trend').textContent = metrics.population.trend + ' dari tahun lalu';
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.population .metric-trend').className = 'metric-trend ' + metrics.population.trendType;
         
         document.querySelector('.income .metric-value').textContent = metrics.income.value;
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.income .metric-trend').textContent = metrics.income.trend + ' dari tahun lalu';
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.income .metric-trend').className = 'metric-trend ' + metrics.income.trendType;
         
         document.querySelector('.education .metric-value').textContent = metrics.education.value;
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.education .metric-trend').textContent = metrics.education.trend + ' dari tahun lalu';
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.education .metric-trend').className = 'metric-trend ' + metrics.education.trendType;
         
         document.querySelector('.health .metric-value').textContent = metrics.health.value;
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.health .metric-trend').textContent = metrics.health.trend + ' dari tahun lalu';
+        // biome-ignore lint/style/useTemplate: <explanation>
         document.querySelector('.health .metric-trend').className = 'metric-trend ' + metrics.health.trendType;
         
         // Update table data
@@ -277,6 +289,7 @@ function generateSamplePopulationData(count, year) {
         if (year === '2024') {
             income = Math.round(income * 1.15); // 15% increase for 2024
         }
+        // biome-ignore lint/style/useTemplate: <explanation>
         const formattedIncome = 'Rp ' + income.toLocaleString('id-ID');
         
         const statusIndex = (seedMultiplier * 11) % statuses.length;
@@ -416,9 +429,8 @@ function initializeCharts(year) {
         },
         tooltip: {
             y: {
-                formatter: function(val) {
-                    return val + " orang";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + " orang"
             }
         },
         title: {
@@ -470,9 +482,7 @@ function initializeCharts(year) {
                 text: 'Kelompok Umur'
             },
             labels: {
-                formatter: function(val) {
-                    return Math.abs(val);
-                }
+                formatter: (val) => Math.abs(val)
             }
         },
         xaxis: {
@@ -481,16 +491,13 @@ function initializeCharts(year) {
                 text: 'Jumlah Penduduk'
             },
             labels: {
-                formatter: function(val) {
-                    return Math.abs(val);
-                }
+                formatter: (val) => Math.abs(val)
             }
         },
         tooltip: {
             y: {
-                formatter: function(val) {
-                    return Math.abs(val) + " orang";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => Math.abs(val) + " orang"
             }
         },
         title: {
@@ -557,9 +564,8 @@ function initializeCharts(year) {
                         fontSize: '14px'
                     },
                     value: {
-                        formatter: function(val) {
-                            return val + "%";
-                        },
+                        // biome-ignore lint/style/useTemplate: <explanation>
+                        formatter: (val) => val + "%",
                         color: '#111',
                         fontSize: '30px',
                         show: true
@@ -611,6 +617,7 @@ function initializeCharts(year) {
     // Infrastructure Chart (Bar Chart)
     const infrastructureSeries = [];
     const years = Object.keys(data.infrastructure);
+    // biome-ignore lint/complexity/noForEach: <explanation>
     years.forEach(yearKey => {
         infrastructureSeries.push({
             name: yearKey,
@@ -649,9 +656,8 @@ function initializeCharts(year) {
                 text: 'Persentase (%)'
             },
             labels: {
-                formatter: function(val) {
-                    return val + "%";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + "%"
             },
             min: 0,
             max: 100
@@ -661,9 +667,8 @@ function initializeCharts(year) {
         },
         tooltip: {
             y: {
-                formatter: function(val) {
-                    return val + "%";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + "%"
             }
         },
         title: {
@@ -1023,9 +1028,8 @@ function initializePemerintahanCharts() {
         xaxis: {
             categories: ['Pembangunan Jalan', 'Revitalisasi Pasar', 'Irigasi', 'Renovasi Sekolah', 'Posyandu'],
             labels: {
-                formatter: function (val) {
-                    return val + "%";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + "%"
             }
         }
     };
@@ -1065,9 +1069,8 @@ function initializePemerintahanCharts() {
         },
         tooltip: {
             y: {
-                formatter: function(val) {
-                    return "Rp " + val + " juta";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => "Rp " + val + " juta"
             }
         },
         fill: {
@@ -1291,9 +1294,8 @@ function initializePendudukCharts() {
             position: 'bottom'
         },
         dataLabels: {
-            formatter: function (val) {
-                return val.toFixed(1) + "%";
-            }
+            // biome-ignore lint/style/useTemplate: <explanation>
+            formatter: (val) => val.toFixed(1) + "%"
         }
     };
     new ApexCharts(document.querySelector("#komposisiPendudukChart"), komposisiPendudukChartOptions).render();
@@ -1405,9 +1407,8 @@ function initializePendidikanCharts() {
             align: 'left'
         },
         legend: {
-            tooltipHoverFormatter: function(val, opts) {
-                return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '%';
-            }
+            // biome-ignore lint/style/useTemplate: <explanation>
+            tooltipHoverFormatter: (val, opts) => val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '%'
         },
         markers: {
             size: 0,
@@ -1420,9 +1421,8 @@ function initializePendidikanCharts() {
         },
         tooltip: {
             y: {
-                formatter: function(val) {
-                    return val + "%";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + "%"
             }
         },
         grid: {
@@ -1470,9 +1470,7 @@ function initializePendidikanCharts() {
         },
         tooltip: {
             y: {
-                formatter: function (val) {
-                    return val;
-                }
+                formatter: (val) => val
             }
         },
         colors: ['#4e73df']
@@ -1581,9 +1579,8 @@ function initializeKesehatanCharts() {
         },
         tooltip: {
             y: {
-                formatter: function (val) {
-                    return val + " kasus";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + " kasus"
             }
         },
         legend: {
@@ -1612,9 +1609,7 @@ function initializeKesehatanCharts() {
                     total: {
                         show: true,
                         label: 'Total',
-                        formatter: function (w) {
-                            return '87.6%';
-                        }
+                        formatter: (w) => '87.6%'
                     }
                 }
             }
@@ -1746,13 +1741,11 @@ function initializeInfrastrukturCharts() {
         }],
         tooltip: {
             y: [{
-                formatter: function (val) {
-                    return "Rp " + val + " juta";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => "Rp " + val + " juta"
             }, {
-                formatter: function (val) {
-                    return val + "%";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + "%"
             }]
         },
         colors: ['#4e73df', '#1cc88a']
@@ -1766,7 +1759,7 @@ function initializeGeografiCharts() {
     const curahHujanChartOptions = {
         series: [{
             name: 'Curah Hujan (mm)',
-            data: [50, 80, 120, 150, 180, 160, 120, 100, 90, 70, 60, 55]
+            data: [335, 264, 272, 215, 71, 156, 30, 53, 136, 81, 512, 90]
         }],
         chart: {
             type: 'bar',
@@ -1800,7 +1793,7 @@ function initializeGeografiCharts() {
     const suhuRataRataChartOptions = {
         series: [{
             name: 'Suhu (°C)',
-            data: [25, 26, 27, 28, 29, 28, 27, 26, 27, 28, 27, 26]
+            data: [24.3, 24.4, 24.3, 25, 25.3, 24.3, 23.8, 24.5, 24.9, 25.6, 23.9, 24.6]
         }],
         chart: {
             type: 'line',
@@ -1949,9 +1942,8 @@ function initializeIndustriCharts() {
         },
         tooltip: {
             y: {
-                formatter: function (val) {
-                    return val + " orang";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + " orang"
             }
         },
         colors: ['#4e73df', '#1cc88a']
@@ -2082,9 +2074,8 @@ function initializePerdaganganCharts() {
         },
         tooltip: {
             y: {
-                formatter: function (val) {
-                    return val + "%";
-                }
+                // biome-ignore lint/style/useTemplate: <explanation>
+                formatter: (val) => val + "%"
             }
         },
         colors: ['#4e73df', '#1cc88a']
