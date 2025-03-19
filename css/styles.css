@@ -128,8 +128,15 @@ body {
     overflow-x: hidden;
 }
 
+.row {
+    overflow: hidden; /* ATAU overflow: scroll */
+}
+
 /* Header Styles */
 .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Penting untuk mencegah elemen lain menutupi header */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,11 +146,18 @@ body {
 
 .stickyheader {
     position: sticky;
+    top: 0; /* Atur jarak dari atas tempat elemen akan mulai "menempel" */
+    background-color: white; /* Penting untuk visibility saat scroll */
+    z-index: 100; /* Penting agar tidak tertutup elemen lain */
+}
+
+.stickyheader.sticky {
+    position: fixed;
     top: 0;
-    z-index: 1000; /* Penting untuk mencegah elemen lain menutupi header */
-    background-color: white; /* Atur warna latar belakang agar konten di bawahnya tidak terlihat */
-    /* Tambahan styling sesuai kebutuhan Anda */
-    /*  Misalnya: padding: 10px;  */
+    left: 0; /* Penting agar menempel di sisi kiri layar */
+    width: 100%; /* Penting agar lebar header tetap */
+    background-color: white;
+    z-index: 100;
 }
 
 .header-title h1 {

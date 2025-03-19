@@ -1,3 +1,15 @@
+// biome-ignore lint/complexity/useArrowFunction: <explanation>
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.stickyheader');
+    const sticky = header.offsetTop; // Jarak header dari atas dokumen
+  
+    if (window.pageYOffset > sticky) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+  
 document.addEventListener('DOMContentLoaded', () => {
     // Page Navigation System
     const menuItems = document.querySelectorAll('.sidebar-dropdown .dropdown-item');
@@ -133,77 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Generate sample data for population table
-function generateSamplePopulationData(count, year) {
-    const names = [
-        'Budi Santoso', 'Siti Rahma', 'Ahmad Hidayat', 'Dewi Putri', 'Joko Widodo',
-        'Sri Wahyuni', 'Agus Priyanto', 'Lina Susanti', 'Hendra Kurniawan', 'Rina Wati',
-        'Dodi Pratama', 'Nina Sari', 'Rudi Hermawan', 'Lia Anggraini', 'Hadi Sucipto'
-    ];
-    
-    const genders = ['Laki-laki', 'Perempuan'];
-    
-    const educations = [
-        'SD', 'SMP', 'SMA', 'D3', 'S1', 'S2', 'S3', 'Tidak Sekolah'
-    ];
-    
-    const jobs = [
-        'Petani', 'Guru', 'Wiraswasta', 'PNS', 'Dokter', 'Perawat', 'Ibu Rumah Tangga',
-        'Buruh', 'Pedagang', 'Pensiunan', 'Tidak Bekerja', 'Lainnya'
-    ];
-    
-    const statuses = [
-        'Kawin', 'Belum Kawin', 'Cerai Hidup', 'Cerai Mati'
-    ];
-    
-    const data = [];
-    
-    // Set a different random seed based on year
-    const yearSeed = year === '2024' ? 12345 : 54321;
-    
-    for (let i = 1; i <= count; i++) {
-        // Use a deterministic "random" approach for consistent data per year
-        const seedMultiplier = (i * yearSeed) % 97;
-        
-        const genderIndex = (seedMultiplier * 3) % genders.length;
-        const gender = genders[genderIndex];
-        
-        const age = 15 + (seedMultiplier % 70);
-        
-        const educationIndex = (seedMultiplier * 5) % educations.length;
-        const education = educations[educationIndex];
-        
-        const jobIndex = (seedMultiplier * 7) % jobs.length;
-        const job = jobs[jobIndex];
-        
-        // Increase incomes for 2024
-        let income = (((seedMultiplier % 9) + 1) * 500000);
-        if (year === '2024') {
-            income = Math.round(income * 1.15); // 15% increase for 2024
-        }
-        // biome-ignore lint/style/useTemplate: <explanation>
-        const formattedIncome = 'Rp ' + income.toLocaleString('id-ID');
-        
-        const statusIndex = (seedMultiplier * 11) % statuses.length;
-        const status = statuses[statusIndex];
-        
-        const nameIndex = (seedMultiplier * 13) % names.length;
-        
-        data.push([
-            i,
-            names[nameIndex],
-            gender,
-            age,
-            education,
-            job,
-            formattedIncome,
-            status
-        ]);
-    }
-    
-    return data;
-}
-
 // Initialize all charts
 function initializeCharts(year) {
     // Different data sets for different years
@@ -217,23 +158,7 @@ function initializeCharts(year) {
                 female: [376, 293, 341, 426, 472, 527, 608, 679, 597, 527, 577, 567, 560, 632, 581, 421],
                 categories: ['75+', '70-74', '65-69', '60-64', '55-59', '50-54', '45-49', '40-44', '35-39', '30-34', '25-29', '20-24', '15-19', '10-14', '05-09', '00-04']
             },
-            education: [10, 22, 38, 13, 14, 3],
-            unemploymentRate: 82,
-            income: [40, 28, 18, 9, 5],
-            infrastructure: {
-                '2021': [65, 75, 45, 80, 55],
-                '2022': [70, 80, 55, 85, 65],
-                '2023': [82, 88, 72, 92, 78],
-                '2024': [89, 92, 82, 95, 85]
-            },
-            budget: [
-                { x: 'Pembangunan', y: 35 },
-                { x: 'Pendidikan', y: 25 },
-                { x: 'Kesehatan', y: 18 },
-                { x: 'Administrasi', y: 8 },
-                { x: 'Sosial', y: 9 },
-                { x: 'Lingkungan', y: 5 }
-            ]
+            education: [7, 6.5, 5.5, 16, 9, 6, 5]
         }
     };
 
@@ -243,11 +168,7 @@ function initializeCharts(year) {
     document.querySelector("#populationChart").innerHTML = '';
     document.querySelector("#ageDistributionChart").innerHTML = '';
     document.querySelector("#educationChart").innerHTML = '';
-    document.querySelector("#unemploymentChart").innerHTML = '';
-    document.querySelector("#incomeChart").innerHTML = '';
-    document.querySelector("#infrastructureChart").innerHTML = '';
-    document.querySelector("#budgetChart").innerHTML = '';
-
+    
     // Population Chart (Line Chart)
     const populationChartOptions = {
         series: [{
@@ -366,8 +287,8 @@ function initializeCharts(year) {
             height: 300,
             width: '100%'
         },
-        labels: ['Tidak Sekolah', 'SD', 'SMP', 'SMA', 'D3/S1', 'S2/S3'],
-        colors: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b', '#5a5c69'],
+        labels: ['RW 01', 'RW 02', 'RW 03', 'RW 04', 'RW 05', 'RW 06', 'RW 07'],
+        colors: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b', '#5a5c69', '#5a5c96'],
         responsive: [{
             breakpoint: 480,
             options: {
