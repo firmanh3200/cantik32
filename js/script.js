@@ -131,114 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    
-    // Data for different years
-    const yearData = {
-        2023: {
-            metrics: {
-                population: {value: '3,542', trend: '+3.2%', trendType: 'positive'},
-                income: {value: 'Rp 2.7 juta', trend: '+5.8%', trendType: 'positive'},
-                education: {value: '78%', trend: '+2.1%', trendType: 'positive'},
-                health: {value: '92%', trend: '+4.5%', trendType: 'positive'}
-            },
-            populationCount: 3542
-        },
-        2024: {
-            metrics: {
-                population: {value: '3,721', trend: '+5.1%', trendType: 'positive'},
-                income: {value: 'Rp 3.1 juta', trend: '+14.8%', trendType: 'positive'},
-                education: {value: '83%', trend: '+6.4%', trendType: 'positive'},
-                health: {value: '95%', trend: '+3.3%', trendType: 'positive'}
-            },
-            populationCount: 3721
-        }
-    };
-    
-    // Get the current selected year
-    const yearSelectElements = [
-        document.getElementById('year-select'),
-        document.getElementById('economy-year-select'),
-        document.getElementById('penduduk-year-select'),
-        document.getElementById('pendidikan-year-select'),
-        document.getElementById('kesehatan-year-select'),
-        document.getElementById('infrastruktur-year-select'),
-        document.getElementById('geografi-year-select'),
-        document.getElementById('industri-year-select'),
-        document.getElementById('perdagangan-year-select'),
-        document.getElementById('pertanian-year-select')
-    ];
-    
-    // biome-ignore lint/complexity/noForEach: <explanation>
-        yearSelectElements.forEach(yearSelect => {
-        if (yearSelect) {
-            // Add 2024 option if not already present
-            if (yearSelect.options.length < 2 || yearSelect.options[0].value !== '2024') {
-                const option2024 = document.createElement('option');
-                option2024.value = '2024';
-                option2024.textContent = '2024';
-                yearSelect.insertBefore(option2024, yearSelect.firstChild);
-            }
-            
-            // Set default to 2024
-            yearSelect.value = '2024';
-            
-            // Initialize with the current selected year
-            updateUIForYear('2024');
-            
-            // Add change event listener
-            yearSelect.addEventListener('change', function() {
-                updateUIForYear(this.value);
-            });
-        }
-    });
-    
-    // Update UI based on the selected year
-    function updateUIForYear(year) {
-        // Update metrics
-        const metrics = yearData[year].metrics;
-        document.querySelector('.population .metric-value').textContent = metrics.population.value;
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.population .metric-trend').textContent = metrics.population.trend + ' dari tahun lalu';
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.population .metric-trend').className = 'metric-trend ' + metrics.population.trendType;
-        
-        document.querySelector('.income .metric-value').textContent = metrics.income.value;
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.income .metric-trend').textContent = metrics.income.trend + ' dari tahun lalu';
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.income .metric-trend').className = 'metric-trend ' + metrics.income.trendType;
-        
-        document.querySelector('.education .metric-value').textContent = metrics.education.value;
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.education .metric-trend').textContent = metrics.education.trend + ' dari tahun lalu';
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.education .metric-trend').className = 'metric-trend ' + metrics.education.trendType;
-        
-        document.querySelector('.health .metric-value').textContent = metrics.health.value;
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.health .metric-trend').textContent = metrics.health.trend + ' dari tahun lalu';
-        // biome-ignore lint/style/useTemplate: <explanation>
-        document.querySelector('.health .metric-trend').className = 'metric-trend ' + metrics.health.trendType;
-        
-        // Update table data
-        populationTable.clear();
-        const sampleData = generateSamplePopulationData(100, year);
-        populationTable.rows.add(sampleData).draw();
-        
-        // Initialize or update charts
-        initializeCharts(year);
-    }
-    
-    // Year select handler
-    const yearSelectElement = document.getElementById('year-select');
-    yearSelectElement.addEventListener('change', function() {
-        const activePage = document.querySelector('.page.active');
-        if (activePage.id === 'dashboard-page') {
-            initializeCharts(this.value);
-        }
-        
-        // Add similar handlers for other pages with year selection if needed
-    });
 });
 
 // Generate sample data for population table
@@ -316,40 +208,14 @@ function generateSamplePopulationData(count, year) {
 function initializeCharts(year) {
     // Different data sets for different years
     const chartData = {
-        2023: {
-            population: {
-                series: [3100, 3200, 3320, 3410, 3542],
-                categories: ['2019', '2020', '2021', '2022', '2023']
-            },
-            ageDistribution: {
-                male: [-300, -450, -500, -400, -320, -200, -100],
-                female: [280, 420, 520, 410, 350, 210, 120]
-            },
-            education: [15, 25, 35, 10, 12, 3],
-            unemploymentRate: 75,
-            income: [45, 25, 15, 10, 5],
-            infrastructure: {
-                '2021': [65, 75, 45, 80, 55],
-                '2022': [70, 80, 55, 85, 65],
-                '2023': [82, 88, 72, 92, 78]
-            },
-            budget: [
-                { x: 'Pembangunan', y: 40 },
-                { x: 'Pendidikan', y: 20 },
-                { x: 'Kesehatan', y: 15 },
-                { x: 'Administrasi', y: 10 },
-                { x: 'Sosial', y: 8 },
-                { x: 'Lingkungan', y: 7 }
-            ]
-        },
         2024: {
             population: {
-                series: [3200, 3320, 3410, 3542, 3721],
-                categories: ['2020', '2021', '2022', '2023', '2024']
+                series: [8442, 8135, 8222, 8332, 8344, 8309, 8235, 8184],
+                categories: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
             },
             ageDistribution: {
-                male: [-310, -470, -520, -450, -340, -220, -110],
-                female: [290, 440, 540, 430, 370, 230, 140]
+                female: [376, 293, 341, 426, 472, 527, 608, 679, 597, 527, 577, 567, 560, 632, 581, 421],
+                categories: ['75+', '70-74', '65-69', '60-64', '55-59', '50-54', '45-49', '40-44', '35-39', '30-34', '25-29', '20-24', '15-19', '10-14', '05-09', '00-04']
             },
             education: [10, 22, 38, 13, 14, 3],
             unemploymentRate: 82,
@@ -443,11 +309,9 @@ function initializeCharts(year) {
     // Age Distribution Chart (Pyramid Chart)
     const ageDistributionChartOptions = {
         series: [{
-            name: 'Laki-laki',
-            data: data.ageDistribution.male
-        }, {
-            name: 'Perempuan',
-            data: data.ageDistribution.female
+            name: 'Jiwa',
+            data: data.ageDistribution.female,
+            categories: data.ageDistribution.categories
         }],
         chart: {
             type: 'bar',
@@ -476,35 +340,19 @@ function initializeCharts(year) {
             }
         },
         yaxis: {
-            min: -600,
+            min: 0,
             max: 600,
             title: {
                 text: 'Kelompok Umur'
-            },
-            labels: {
-                formatter: (val) => Math.abs(val)
             }
         },
         xaxis: {
-            categories: ['65+', '55-64', '45-54', '35-44', '25-34', '18-24', '0-17'],
             title: {
                 text: 'Jumlah Penduduk'
-            },
-            labels: {
-                formatter: (val) => Math.abs(val)
             }
-        },
-        tooltip: {
-            y: {
-                // biome-ignore lint/style/useTemplate: <explanation>
-                formatter: (val) => Math.abs(val) + " orang"
-            }
-        },
-        title: {
-            text: undefined
         },
         legend: {
-            position: 'top'
+            position: 'bottom'
         }
     };
     const ageDistributionChart = new ApexCharts(document.querySelector("#ageDistributionChart"), ageDistributionChartOptions);
