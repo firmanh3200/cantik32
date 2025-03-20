@@ -72,13 +72,9 @@
                                     <li data-page="penduduk" class="dropdown-item"><i class="fas fa-users"></i> Penduduk</li>
                                     <li data-page="pendidikan" class="dropdown-item"><i class="fas fa-graduation-cap"></i> Pendidikan</li>
                                     <li data-page="kesehatan" class="dropdown-item"><i class="fas fa-medkit"></i> Kesehatan</li>
-                                    <li data-page="pertanian" class="dropdown-item"><i class="fas fa-tractor"></i> Pertanian</li>
                                     <li data-page="industri" class="dropdown-item"><i class="fas fa-industry"></i> Industri</li>
                                     <li data-page="perdagangan" class="dropdown-item"><i class="fas fa-shopping-basket"></i> Perdagangan</li>
                                     <li data-page="pariwisata" class="dropdown-item"><i class="fas fa-umbrella-beach"></i> Pariwisata</li>
-                                    <li data-page="statistics" class="dropdown-item"><i class="fas fa-chart-bar"></i> Statistik</li>
-                                    <li data-page="ekonomi" class="dropdown-item"><i class="fas fa-briefcase"></i> Ekonomi</li>
-                                    <li data-page="infrastruktur" class="dropdown-item"><i class="fas fa-map-marked-alt"></i> Infrastruktur</li>
                                 </ul>
                             </div>
                         </div>
@@ -697,19 +693,6 @@
                         </div>
                     </header>
                     <br>
-                    <div class="pendidikan-overview-section">
-                        <div class="stats-detail-grid">
-                            <div class="stats-detail-card">
-                                <h3>Tingkat Pendidikan Terkini</h3>
-                                <div id="tingkatPendidikanChart" class="chart"></div>
-                            </div>
-                            <div class="stats-detail-card">
-                                <h3>Perkembangan Tingkat Pendidikan</h3>
-                                <div id="trendPendidikanChart" class="chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="pendidikan-facilities">
                         <div class="datatable-container">
                             <div class="datatable-header">
@@ -721,12 +704,8 @@
                                         <i class="fas fa-school"></i>
                                     </div>
                                     <div class="facility-details">
-                                        <h4>Taman Kanak-kanak</h4>
+                                        <h4>T P Q</h4>
                                         <p class="facility-count">2</p>
-                                        <div class="facility-stat">
-                                            <span>42 Murid</span>
-                                            <span>6 Guru</span>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="facility-card">
@@ -734,12 +713,8 @@
                                         <i class="fas fa-school"></i>
                                     </div>
                                     <div class="facility-details">
-                                        <h4>Sekolah Dasar</h4>
-                                        <p class="facility-count">3</p>
-                                        <div class="facility-stat">
-                                            <span>325 Murid</span>
-                                            <span>24 Guru</span>
-                                        </div>
+                                        <h4>PAUD</h4>
+                                        <p class="facility-count">5</p>
                                     </div>
                                 </div>
                                 <div class="facility-card">
@@ -747,38 +722,65 @@
                                         <i class="fas fa-school"></i>
                                     </div>
                                     <div class="facility-details">
-                                        <h4>Sekolah Menengah Pertama</h4>
-                                        <p class="facility-count">1</p>
-                                        <div class="facility-stat">
-                                            <span>178 Murid</span>
-                                            <span>15 Guru</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="facility-card">
-                                    <div class="facility-icon">
-                                        <i class="fas fa-book-reader"></i>
-                                    </div>
-                                    <div class="facility-details">
-                                        <h4>Perpustakaan Desa</h4>
-                                        <p class="facility-count">1</p>
-                                        <div class="facility-stat">
-                                            <span>2,500 Buku</span>
-                                            <span>3 Petugas</span>
-                                        </div>
+                                        <h4>T K</h4>
+                                        <p class="facility-count">5</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="pendidikan-performance">
+                    <div class="pendidikan-overview-section">
+                        <div class="stats-detail-grid">
+                            <div class="stats-detail-card">
+                                <h3>Tingkat Pendidikan Terkini</h3>
+                                <div id="tingkatPendidikanChart" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pendidikan-facilities">
                         <div class="datatable-container">
                             <div class="datatable-header">
-                                <h3>Performa Pendidikan</h3>
+                                <h3>Fasilitas Pendidikan</h3>
                             </div>
-                            <div class="performance-metrics">
-                                <div id="rataRataNilaiChart" class="chart"></div>
+                            <div class="facility-cards">
+                                <div class="facility-card md-3">
+                                    <div class="facility-icon">
+                                        <i class="fas fa-school"></i>
+                                    </div>
+                                    <div class="facility-details">
+                                        <h4>S D</h4>
+                                        <p class="facility-count">5</p>
+                                    </div>
+                                </div>
+                                <div class="facility-card md-3">
+                                    <div class="facility-icon">
+                                        <i class="fas fa-school"></i>
+                                    </div>
+                                    <div class="facility-details">
+                                        <h4>S M P</h4>
+                                        <p class="facility-count">6</p>
+                                    </div>
+                                </div>
+                                <div class="facility-card md-3">
+                                    <div class="facility-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </div>
+                                    <div class="facility-details">
+                                        <h4>S M A</h4>
+                                        <p class="facility-count">2</p>
+                                    </div>
+                                </div>
+                                <div class="facility-card md-3">
+                                    <div class="facility-icon">
+                                        <i class="fas fa-book-reader"></i>
+                                    </div>
+                                    <div class="facility-details">
+                                        <h4>S M K</h4>
+                                        <p class="facility-count">1</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -786,41 +788,146 @@
                     <div class="pendidikan-programs">
                         <div class="datatable-container">
                             <div class="datatable-header">
-                                <h3>Program Pendidikan</h3>
+                                <h3>Daftar Sarana Pendidikan</h3>
                             </div>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Nama Program</th>
-                                        <th>Target</th>
-                                        <th>Anggaran</th>
-                                        <th>Status</th>
+                                        <th>Jenjang</th>
+                                        <th>Nama</th>
+                                        <th>Alamat</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Beasiswa Desa Cerdas</td>
-                                        <td>45 siswa berprestasi</td>
-                                        <td>Rp 90 juta</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
+                                        <td>TPQ</td>
+                                        <td>TPQ ASSALAM</td>
+                                        <td>JL. DISAN NO. 1</td>
                                     </tr>
                                     <tr>
-                                        <td>Renovasi SD Desa</td>
-                                        <td>3 sekolah dasar</td>
-                                        <td>Rp 350 juta</td>
-                                        <td><span class="badge bg-primary">Proses</span></td>
+                                        <td>TPQ</td>
+                                        <td>TPQ WALADHSOLIH</td>
+                                        <td>JL. PASUNDAN</td>
                                     </tr>
                                     <tr>
-                                        <td>Kelas Digital</td>
-                                        <td>5 lab komputer</td>
-                                        <td>Rp 200 juta</td>
-                                        <td><span class="badge bg-warning">Pending</span></td>
+                                        <td>PAUD</td>
+                                        <td>POS PAUD BOUGENVILE</td>
+                                        <td>JL. PASUNDAN NO. 51 RT 03 RW 04</td>
                                     </tr>
                                     <tr>
-                                        <td>Pelatihan Guru</td>
-                                        <td>45 guru</td>
-                                        <td>Rp 75 juta</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
+                                        <td>PAUD</td>
+                                        <td>POS PAUD ZAINUL HAYAT</td>
+                                        <td>JL. PUNGKUR NO. 133A RW 05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PAUD</td>
+                                        <td>POS PAUD AL ISLAM</td>
+                                        <td>GG. NITI PRAJA RW 05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PAUD</td>
+                                        <td>POS PAUD IZHAR</td>
+                                        <td>JL. NURSAID RT 03 RW 06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PAUD</td>
+                                        <td>POS PAUD PELANGI</td>
+                                        <td>JL. LENGKONG BESAR RW 07</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TK</td>
+                                        <td>RA/BA/TA AL-IKHLASH</td>
+                                        <td>JL. ANCOL UTARA I NO. 41/36D</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TK</td>
+                                        <td>TK AL HIKMAH</td>
+                                        <td>JL. BAPAK ILUS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TK</td>
+                                        <td>TK ASSALAM</td>
+                                        <td>JL. SASAK GANTUNG NO. 9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TK</td>
+                                        <td>TK KARTIKA</td>
+                                        <td>JL. PASUNDAN NO. 47</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TK</td>
+                                        <td>TK KRISTEN REHOBOT</td>
+                                        <td>JL. RD. DEWI SARTIKA NO. 36-38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SD</td>
+                                        <td>SD ASSALAM</td>
+                                        <td>JL. SASAK GANTUNG NO. 1-3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SD</td>
+                                        <td>SD DEWI SARTIKA</td>
+                                        <td>JL. KAUTAMAAN ISTRI NO. 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SD</td>
+                                        <td>SD KRISTEN REHOBOT</td>
+                                        <td>JL. RD. DEWI SARTIKA NO. 36-38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SD</td>
+                                        <td>SD NEGERI 020 LENGKONG BESAR</td>
+                                        <td>JL. LENGKONG BESAR NO. 139</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SD</td>
+                                        <td>SD NEGERI 047 BALONGGEDE</td>
+                                        <td>JL. BALONGGEDE NO. 49</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP</td>
+                                        <td>SMP ASSALAM</td>
+                                        <td>JL. SASAK GANTUNG NO. 12-14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP</td>
+                                        <td>SMP DEWI SARTIKA</td>
+                                        <td>JL. KAUTAMAAN ISTRI NO. 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP</td>
+                                        <td>SMP KRISTEN REHOBOT</td>
+                                        <td>JL. RD. DEWI SARTIKA NO. 36-38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP</td>
+                                        <td>SMP NEGERI 43</td>
+                                        <td>JL. KAUTAMAAN ISTRI NO. 31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP</td>
+                                        <td>SMP PASUNDAN 1</td>
+                                        <td>JL. PASUNDAN NO. 32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP</td>
+                                        <td>SMP PASUNDAN 2</td>
+                                        <td>JL. PASUNDAN NO. 32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMA</td>
+                                        <td>SMA KRISTEN REHOBOT</td>
+                                        <td>JL. DEWI SARTIKA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMA</td>
+                                        <td>SMA PASUNDAN 1</td>
+                                        <td>JL. BALONGGEDE NO. 28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMK</td>
+                                        <td>SMK PASUNDAN 1</td>
+                                        <td>JL. BALONGGEDE NO. 44</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -836,30 +943,30 @@
                 <div class="page" id="kesehatan-page">
                     <header class="header">
                         <div class="header-title text-center">
-                            <h1>Bidang Kesehatan</h1>
+                            <h1>Bidang Kesehatan 2023</h1>
                         </div>
                     </header>
                     <br>
                     <div class="kesehatan-highlights">
                         <div class="stats-highlight-grid">
                             <div class="stats-card">
-                                <h3>Harapan Hidup</h3>
-                                <p class="stats-value">72.5 tahun</p>
+                                <h3>Pasangan Usia Subur</h3>
+                                <p class="stats-value">655</p>
                                 <div id="harapanHidupChart" class="mini-chart"></div>
                             </div>
                             <div class="stats-card">
-                                <h3>Angka Kematian Bayi</h3>
-                                <p class="stats-value">2.1%</p>
+                                <h3>Peserta KB Aktif</h3>
+                                <p class="stats-value">375</p>
                                 <div id="kematianBayiChart" class="mini-chart"></div>
                             </div>
                             <div class="stats-card">
-                                <h3>Cakupan Vaksinasi</h3>
-                                <p class="stats-value">95%</p>
+                                <h3>Praktek Dokter</h3>
+                                <p class="stats-value">7</p>
                                 <div id="cakupanVaksinasiChart" class="mini-chart"></div>
                             </div>
                             <div class="stats-card">
-                                <h3>Angka Kesakitan</h3>
-                                <p class="stats-value">4.2%</p>
+                                <h3>Praktek Bidan</h3>
+                                <p class="stats-value">1</p>
                                 <div id="angkaKesakitanChart" class="mini-chart"></div>
                             </div>
                         </div>
@@ -868,15 +975,15 @@
                     <div class="penyakit-section">
                         <div class="datatable-container">
                             <div class="datatable-header">
-                                <h3>Pola Penyakit Umum</h3>
+                                <h3>Alat Kontrasepsi Peserta KB Aktif</h3>
                             </div>
                             <div id="polaPenyakitChart" class="full-width-chart"></div>
                         </div>
                     </div>
 
                     <div class="kesehatan-facilities">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
+                        <div class="container">
+                            <div class="header">
                                 <h3>Fasilitas Kesehatan</h3>
                             </div>
                             <div class="facility-cards">
@@ -887,10 +994,6 @@
                                     <div class="facility-details">
                                         <h4>Puskesmas</h4>
                                         <p class="facility-count">1</p>
-                                        <div class="facility-stat">
-                                            <span>4 Dokter</span>
-                                            <span>12 Perawat</span>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="facility-card">
@@ -899,11 +1002,7 @@
                                     </div>
                                     <div class="facility-details">
                                         <h4>Posyandu</h4>
-                                        <p class="facility-count">5</p>
-                                        <div class="facility-stat">
-                                            <span>15 Kader</span>
-                                            <span>5 Bidan</span>
-                                        </div>
+                                        <p class="facility-count">...</p>
                                     </div>
                                 </div>
                                 <div class="facility-card">
@@ -911,12 +1010,8 @@
                                         <i class="fas fa-pills"></i>
                                     </div>
                                     <div class="facility-details">
-                                        <h4>Apotek</h4>
+                                        <h4>Klinik</h4>
                                         <p class="facility-count">2</p>
-                                        <div class="facility-stat">
-                                            <span>3 Apoteker</span>
-                                            <span>4 Asisten</span>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="facility-card">
@@ -924,12 +1019,8 @@
                                         <i class="fas fa-ambulance"></i>
                                     </div>
                                     <div class="facility-details">
-                                        <h4>Ambulans Desa</h4>
-                                        <p class="facility-count">1</p>
-                                        <div class="facility-stat">
-                                            <span>2 Petugas</span>
-                                            <span>24 Jam</span>
-                                        </div>
+                                        <h4>Ambulans</h4>
+                                        <p class="facility-count">...</p>
                                     </div>
                                 </div>
                             </div>
@@ -939,184 +1030,65 @@
                     <div class="kesehatan-programs">
                         <div class="datatable-container">
                             <div class="datatable-header">
-                                <h3>Program Kesehatan</h3>
+                                <h3>Daftar Fasilitas Kesehatan</h3>
                             </div>
-                            <div id="programKesehatanChart" class="chart"></div>
+                            <div>
+                                <table class="table tbl-responsive tbl-">
+                                    <thead>
+                                        <tr>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>PUSKESMAS PASUNDAN</td>
+                                            <td>JL. PASUNDAN NO.104</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DRG. JEFREY SP. KGA</td>
+                                            <td>JL. KAPATIHAN NO. 49</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DR. KUNTORO KURNIAWAN</td>
+                                            <td>JL. OTTO ISKANDAR DINATA NO. 311-313</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DR. ARIF SOEMARJONO SP.KFR</td>
+                                            <td>JL. OTTO ISKANDAR DINATA NO. 311-313</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DR. ADITYA W. SP.KFR</td>
+                                            <td>JL. OTTO ISKANDAR DINATA NO. 311-313</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DR. YANNE C.</td>
+                                            <td>JL. SASAK GANTUNG NO. 13</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DR. DIANAWATI</td>
+                                            <td>JL. DALEUM KAUM NO. 68</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DR. WIDURA MS.</td>
+                                            <td>JL. BALONGGEDE NO. 83</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SITI SUMIATI AM.KEB</td>
+                                            <td>JL. NITIPRAJA NO. 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KLINIK MAHKOTA</td>
+                                            <td>JL. PASUNDAN NO. 97</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
                     <footer class="main-footer">
                         <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
-                    </footer>
-                </div>
-
-                <!-- Pertanian Page -->
-                <div class="page" id="pertanian-page">
-                    <header class="header">
-                        <div class="header-title text-center">
-                            <h1>Bidang Pertanian</h1>
-                        </div>
-                    </header>
-                    <br>
-                    <div class="ekonomi-highlight">
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-seedling"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Luas Lahan Pertanian</h3>
-                                <p class="value">450 Hektar</p>
-                                <p class="trend positive">+5% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-wheat-awn"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Produksi Padi</h3>
-                                <p class="value">1,250 Ton</p>
-                                <p class="trend positive">+8.5% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Petani Aktif</h3>
-                                <p class="value">870 Orang</p>
-                                <p class="trend positive">+3.2% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="stats-detail-grid">
-                        <div class="stats-detail-card">
-                            <h3>Distribusi Jenis Tanaman</h3>
-                            <div id="jenisTanamanChart" class="chart"></div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Hasil Panen Tahunan</h3>
-                            <div id="hasilPanenChart" class="chart"></div>
-                        </div>
-                    </div>
-
-                    <div class="datatable-section">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Kelompok Tani</h3>
-                                <div class="datatable-actions">
-                                    <button class="btn-primary"><i class="fas fa-plus"></i> Tambah Kelompok</button>
-                                </div>
-                            </div>
-                            <table id="pertanianTable" class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Kelompok</th>
-                                        <th>Jumlah Anggota</th>
-                                        <th>Jenis Tanaman</th>
-                                        <th>Luas Lahan (Ha)</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Tani Makmur</td>
-                                        <td>45</td>
-                                        <td>Padi</td>
-                                        <td>75</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Subur Jaya</td>
-                                        <td>38</td>
-                                        <td>Jagung</td>
-                                        <td>60</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Tani Mandiri</td>
-                                        <td>32</td>
-                                        <td>Kedelai</td>
-                                        <td>45</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Mitra Tani</td>
-                                        <td>25</td>
-                                        <td>Hortikultura</td>
-                                        <td>30</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Harapan Baru</td>
-                                        <td>28</td>
-                                        <td>Palawija</td>
-                                        <td>40</td>
-                                        <td><span class="badge bg-success">Aktif</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="stats-detail-grid">
-                        <div class="stats-detail-card">
-                            <h3>Infrastruktur Pertanian</h3>
-                            <div class="facility-cards">
-                                <div class="facility-card">
-                                    <div class="facility-icon">
-                                        <i class="fas fa-water"></i>
-                                    </div>
-                                    <div class="facility-details">
-                                        <h4>Irigasi</h4>
-                                        <p class="facility-count">375 Ha</p>
-                                        <div class="facility-stat">
-                                            <span>83% dari lahan</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="facility-card">
-                                    <div class="facility-icon">
-                                        <i class="fas fa-warehouse"></i>
-                                    </div>
-                                    <div class="facility-details">
-                                        <h4>Gudang</h4>
-                                        <p class="facility-count">5 Unit</p>
-                                        <div class="facility-stat">
-                                            <span>Kapasitas 500 ton</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="facility-card">
-                                    <div class="facility-icon">
-                                        <i class="fas fa-tractor"></i>
-                                    </div>
-                                    <div class="facility-details">
-                                        <h4>Alat Berat</h4>
-                                        <p class="facility-count">12 Unit</p>
-                                        <div class="facility-stat">
-                                            <span>Traktor & Penggilingan</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Program Pertanian</h3>
-                            <div id="programPertanianChart" class="chart"></div>
-                        </div>
-                    </div>
-
-                    <footer class="main-footer">
-                        <p>&copy; 2024 Kelurahan Balong Gede, Kecamatan Regol, Kota Bandung. Semua hak dilindungi.</p>
                     </footer>
                 </div>
 
@@ -1488,329 +1460,6 @@
 
                     <footer class="main-footer">
                         <p>&copy; 2024 Kelurahan Balong Gede, Kecamatan Regol, Kota Bandung. Semua hak dilindungi.</p>
-                    </footer>
-                </div>
-
-                <!-- Statistics Page -->
-                <div class="page" id="statistics-page">
-                    <header class="header">
-                        <div class="header-title text-center">
-                            <h1>Statistik</h1>
-                        </div>
-                    </header>
-                    <br>
-                    <div class="stats-highlight-box">
-                        <div class="stats-highlight-header">
-                            <h2>Highlight Statistik Desa</h2>
-                            <p>Informasi penting tentang perkembangan desa dalam tahun terpilih</p>
-                        </div>
-                        <div class="stats-highlight-grid">
-                            <div class="stats-card">
-                                <h3>Kepadatan Penduduk</h3>
-                                <p class="stats-value">124 jiwa/km²</p>
-                                <div id="densityChart" class="mini-chart"></div>
-                            </div>
-                            <div class="stats-card">
-                                <h3>Rasio Jenis Kelamin</h3>
-                                <p class="stats-value">102:100</p>
-                                <div id="genderRatioChart" class="mini-chart"></div>
-                            </div>
-                            <div class="stats-card">
-                                <h3>Indeks Pembangunan Desa</h3>
-                                <p class="stats-value">0.72</p>
-                                <div id="developmentIndexChart" class="mini-chart"></div>
-                            </div>
-                            <div class="stats-card">
-                                <h3>Tingkat Kelahiran</h3>
-                                <p class="stats-value">2.1%</p>
-                                <div id="birthRateChart" class="mini-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="stats-comparison-section">
-                        <h2>Perbandingan Tahun 2023 vs 2024</h2>
-                        <div id="yearComparisonChart" class="full-width-chart"></div>
-                    </div>
-
-                    <div class="stats-detail-grid">
-                        <div class="stats-detail-card">
-                            <h3>Proyeksi Penduduk</h3>
-                            <div id="populationProjectionChart" class="chart"></div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Statistik Perkawinan</h3>
-                            <div id="marriageStatsChart" class="chart"></div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Indikator Kesejahteraan</h3>
-                            <div id="welfareIndicatorsChart" class="chart"></div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Pendidikan vs Pendapatan</h3>
-                            <div id="educationIncomeChart" class="chart"></div>
-                        </div>
-                    </div>
-
-                    <footer class="main-footer">
-                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
-                    </footer>
-                </div>
-
-                <!-- Ekonomi Page -->
-                <div class="page" id="ekonomi-page">
-                    <header class="header">
-                        <div class="header-title text-center">
-                            <h1>Bidang Ekonomi</h1>
-                        </div>
-                    </header>
-                    <br>
-                    <div class="ekonomi-highlight">
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-coins"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>PDRB Desa</h3>
-                                <p class="value">Rp 8.7 Miliar</p>
-                                <p class="trend positive">+8.2% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>UMKM Aktif</h3>
-                                <p class="value">127 Unit</p>
-                                <p class="trend positive">+15 unit dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-percentage"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Tingkat Inflasi</h3>
-                                <p class="value">3.2%</p>
-                                <p class="trend positive">-0.5% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ekonomi-sectors">
-                        <h2>Sektor Ekonomi Desa</h2>
-                        <div class="sector-cards">
-                            <div class="sector-card">
-                                <div class="sector-icon">
-                                    <i class="fas fa-tractor"></i>
-                                </div>
-                                <h3>Pertanian</h3>
-                                <p class="sector-value">45%</p>
-                                <div id="pertanianChart" class="mini-sector-chart"></div>
-                            </div>
-                            <div class="sector-card">
-                                <div class="sector-icon">
-                                    <i class="fas fa-industry"></i>
-                                </div>
-                                <h3>Industri Rumahan</h3>
-                                <p class="sector-value">22%</p>
-                                <div id="industriChart" class="mini-sector-chart"></div>
-                            </div>
-                            <div class="sector-card">
-                                <div class="sector-icon">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                                <h3>Perdagangan</h3>
-                                <p class="sector-value">18%</p>
-                                <div id="perdaganganChart" class="mini-sector-chart"></div>
-                            </div>
-                            <div class="sector-card">
-                                <div class="sector-icon">
-                                    <i class="fas fa-concierge-bell"></i>
-                                </div>
-                                <h3>Jasa</h3>
-                                <p class="sector-value">15%</p>
-                                <div id="jasaChart" class="mini-sector-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="ekonomi-detail-charts">
-                        <div class="ekonomi-chart-container">
-                            <h3>Perkembangan Ekonomi Desa</h3>
-                            <div id="perkembanganEkonomiChart" class="chart"></div>
-                        </div>
-                        <div class="ekonomi-chart-container">
-                            <h3>Distribusi Pendapatan</h3>
-                            <div id="pendapatanDistribusiChart" class="chart"></div>
-                        </div>
-                    </div>
-
-                    <div class="umkm-section">
-                        <h2>Perkembangan UMKM</h2>
-                        <div class="umkm-table-container">
-                            <table id="umkmTable" class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama UMKM</th>
-                                        <th>Sektor</th>
-                                        <th>Jumlah Karyawan</th>
-                                        <th>Pendapatan Tahunan</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Data will be populated by JavaScript -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <footer class="main-footer">
-                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
-                    </footer>
-                </div>
-
-                <!-- Infrastruktur Page -->
-                <div class="page" id="infrastruktur-page">
-                    <header class="header">
-                        <div class="header-title text-center">
-                            <h1>Bidang Infrastruktur</h1>
-                        </div>
-                    </header>
-                    <br>
-                    <div class="infrastruktur-overview">
-                        <div class="stats-detail-grid">
-                            <div class="stats-detail-card">
-                                <h3>Peta Infrastruktur Desa</h3>
-                                <div id="infrastrukturMap" class="desa-map-large"></div>
-                            </div>
-                            <div class="stats-detail-card">
-                                <h3>Cakupan Infrastruktur</h3>
-                                <div id="cakupanInfrastrukturChart" class="chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="infrastruktur-stats">
-                        <div class="stats-highlight-grid">
-                            <div class="stats-card">
-                                <h3>Jalan Desa</h3>
-                                <p class="stats-value">18.5 km</p>
-                                <div class="progress-bar-container">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">89% kondisi baik</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stats-card">
-                                <h3>Air Bersih</h3>
-                                <p class="stats-value">92%</p>
-                                <div class="progress-bar-container">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">92% rumah tangga</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stats-card">
-                                <h3>Listrik</h3>
-                                <p class="stats-value">98%</p>
-                                <div class="progress-bar-container">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">98% rumah tangga</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stats-card">
-                                <h3>Internet</h3>
-                                <p class="stats-value">85%</p>
-                                <div class="progress-bar-container">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% area desa</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="infrastruktur-projects">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Proyek Infrastruktur</h3>
-                            </div>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Proyek</th>
-                                        <th>Lokasi</th>
-                                        <th>Anggaran</th>
-                                        <th>Progress</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Perbaikan Jalan Desa Barat</td>
-                                        <td>Dusun Barat</td>
-                                        <td>Rp 450 juta</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-success">Selesai</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pembangunan Irigasi</td>
-                                        <td>Persawahan Timur</td>
-                                        <td>Rp 380 juta</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-primary">Proses</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Instalasi Menara BTS</td>
-                                        <td>Bukit Utara</td>
-                                        <td>Rp 650 juta</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-primary">Proses</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fasilitas Olahraga</td>
-                                        <td>Lapangan Desa</td>
-                                        <td>Rp 250 juta</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge bg-warning">Proses Awal</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="infrastruktur-comparison">
-                        <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Perbandingan Pembangunan Tahunan</h3>
-                            </div>
-                            <div id="pembangunanTahunanChart" class="chart"></div>
-                        </div>
-                    </div>
-
-                    <footer class="main-footer">
-                        <p>&copy; 2024 Kelurahan Balong Gede. Hak cipta dilindungi.</p>
                     </footer>
                 </div>
 

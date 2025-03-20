@@ -139,8 +139,8 @@
              </div>
         </div>
 
-       <div class="row d-flex align-items-stretch">
-             <div class="col-md-6">
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-6">
                  <div class="card">
                       <div class="card-header">Agama</div>
                        <div class="card-body">
@@ -149,7 +149,7 @@
                          </div>
                        </div>
                   </div>
-             </div>
+            </div>
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">Pekerjaan</div>
@@ -160,7 +160,30 @@
                     </div>
                </div>
            </div>
-      </div>
+        </div>
+
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-6">
+                 <div class="card">
+                      <div class="card-header">Golongan Darah</div>
+                       <div class="card-body">
+                         <div class="chart-container">
+                            <canvas id="goldarChart" style="height: 100%; width: 100%;"></canvas>
+                         </div>
+                       </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Status Perkawinan</div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                           <canvas id="kawinChart" style="height: 100%; width: 100%;"></canvas>
+                         </div>
+                    </div>
+               </div>
+           </div>
+        </div>
     </div>
     <script>
         const ageChartCanvas = document.getElementById('ageChart');
@@ -170,12 +193,12 @@
 				labels: ['75+', '70-74', '65-69', '60-64', '55-59', '50-54', '45-49', '40-44', '35-39', '30-34', '25-29', '20-24', '15-19', '10-14', '5-9', '0-4'],
 				datasets: [{
 					label: 'Laki-laki',
-					data: [10, 17, 135, 244, 579, 438, 503, 547, 550, 586, 491, 506, 537, 355, 206, 225],
+					data: [152, 133, 149, 198, 242, 267, 297, 356, 301, 245, 298, 280, 277, 336, 323, 220],
 					backgroundColor: '#0f7dc4',
 					stack: 'Stack 0',
 				}, {
 					label: 'Perempuan',
-					data: [-9, -39, -139, -307, -423, -418, -455, -484, -592, -524, -473, -513, -472, -525, -218, -200],
+					data: [-224, -160, -192, -228, -230, -260, -311, -323, -296, -282, -279, -287, -283, -296, -258, -201],
 					backgroundColor: '#f2bb0d',
 					stack: 'Stack 0',
 				}]
@@ -248,7 +271,7 @@
         }
     });
 
-     const religionChartCanvas = document.getElementById('religionChart');
+    const religionChartCanvas = document.getElementById('religionChart');
     const religionChart = new Chart(religionChartCanvas, {
          type: 'doughnut',
         data: {
@@ -277,10 +300,10 @@
     const jobChart = new Chart(jobChartCanvas, {
         type: 'bar',
         data: {
-            labels: ['Belum/Tidak Bekerja', 'Pelajar dan Mahasiswa', 'Wiraswasta', 'Mengurus Rumah Tangga', 'Pensiunan', 'Guru', 'Perdagangan', 'Pengacara', 'Perawat'],
+            labels: ['Pelajar dan Mahasiswa', 'Belum/Tidak Bekerja', 'Wiraswasta', 'Mengurus Rumah Tangga', 'Pensiunan', 'Guru', 'Perdagangan', 'Pengacara', 'Perawat'],
             datasets: [{
                 label: 'Jiwa',
-                data: [3453, 3265, 3062, 720, 169, 90, 22, 20, 2],
+                data: [1741, 1334, 1021, 182, 60, 32, 10, 5, 2],
                 backgroundColor: '#0f7dc4',
             }]
         },
@@ -315,6 +338,101 @@
             maintainAspectRatio: false
         }
     });
+
+    const goldarChartCanvas = document.getElementById('goldarChart');
+
+        // Fungsi untuk menghasilkan warna acak (ganti dengan logika Anda)
+        function getRandomColor() {
+            const letters = '5678901234ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        const goldarChart = new Chart(goldarChartCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['A', 'B', 'AB', 'O', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'], // Label di sini!
+                datasets: [
+                {
+                    data: [1238, 952, 511, 1888, 34, 0, 32, 1, 7, 2, 18, 4],
+                    // borderColor: 'green',  // Optional: Warna garis batas
+                    borderWidth: 1,
+                    spacing: 0,
+                    backgroundColor: [ // Ganti dengan array warna yang sesuai atau fungsi
+                        getRandomColor(),
+                        getRandomColor(),
+                        getRandomColor(),
+                        getRandomColor()
+                    ],
+                    hoverOffset: 4 // Jarak saat dihover
+                }
+                ],
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                title: {
+                    display: false,
+                    text: 'My treemap chart' 
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom' // Tampilkan legenda
+                }
+                }
+            }
+        });
+
+    const kawinChartCanvas = document.getElementById('kawinChart');
+
+        // Fungsi untuk menghasilkan warna acak (ganti dengan logika Anda)
+        function getRandomColor() {
+            const letters = '5678901234ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        const kawinChart = new Chart(kawinChartCanvas, {
+            type: 'pie',
+            data: {
+                labels: ['Belum Kawin', 'Kawin', 'Cerai Mati', 'Cerai Hidup'], // Label di sini!
+                datasets: [
+                {
+                    data: [3731, 3667, 482, 304],
+                    // borderColor: 'green',  // Optional: Warna garis batas
+                    borderWidth: 1,
+                    spacing: 0,
+                    backgroundColor: [ // Ganti dengan array warna yang sesuai atau fungsi
+                        getRandomColor(),
+                        getRandomColor(),
+                        getRandomColor(),
+                        getRandomColor()
+                    ],
+                    hoverOffset: 4 // Jarak saat dihover
+                }
+                ],
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                title: {
+                    display: false,
+                    text: 'My treemap chart' 
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom' // Tampilkan legenda
+                }
+                }
+            }
+        });
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

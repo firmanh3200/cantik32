@@ -1120,12 +1120,12 @@ function initializePendudukCharts() {
 function initializePendidikanCharts() {
     // Tingkat Pendidikan Chart (Pie)
     const tingkatPendidikanChartOptions = {
-        series: [10, 22, 38, 13, 14, 3],
+        series: [1179, 655, 486, 953, 3394, 337, 1097, 83],
         chart: {
             type: 'pie',
             height: 350
         },
-        labels: ['Tidak Sekolah', 'SD', 'SMP', 'SMA', 'D3/S1', 'S2/S3'],
+        labels: ['Tidak/Belum Sekolah', 'Belum Tamat SD', 'SD', 'SMP', 'SMA', 'Diploma', 'Sarjana', 'S2/S3'],
         colors: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b', '#5a5c69'],
         responsive: [{
             breakpoint: 480,
@@ -1271,8 +1271,8 @@ function initializeKesehatanCharts() {
     new ApexCharts(document.querySelector("#harapanHidupChart"), {
         ...miniChartOptions,
         series: [{
-            name: 'Harapan Hidup',
-            data: [68.4, 69.2, 70.5, 71.8, 72.5]
+            name: 'Pasangan Usia Subur',
+            data: [850, 595, 674, 655]
         }],
         colors: ['#1cc88a']
     }).render();
@@ -1281,8 +1281,8 @@ function initializeKesehatanCharts() {
     new ApexCharts(document.querySelector("#kematianBayiChart"), {
         ...miniChartOptions,
         series: [{
-            name: 'Kematian Bayi',
-            data: [4.2, 3.8, 3.2, 2.5, 2.1]
+            name: 'Peserta KB Aktif',
+            data: [486, 426, 399, 375]
         }],
         colors: ['#e74a3b']
     }).render();
@@ -1291,8 +1291,8 @@ function initializeKesehatanCharts() {
     new ApexCharts(document.querySelector("#cakupanVaksinasiChart"), {
         ...miniChartOptions,
         series: [{
-            name: 'Vaksinasi',
-            data: [82, 85, 90, 93, 95]
+            name: 'Praktek Dokter',
+            data: [7, 7]
         }],
         colors: ['#4e73df']
     }).render();
@@ -1301,20 +1301,20 @@ function initializeKesehatanCharts() {
     new ApexCharts(document.querySelector("#angkaKesakitanChart"), {
         ...miniChartOptions,
         series: [{
-            name: 'Kesakitan',
-            data: [6.8, 6.2, 5.5, 4.8, 4.2]
+            name: 'Praktek Bidan',
+            data: [1, 1]
         }],
         colors: ['#f6c23e']
     }).render();
     
-    // Pola Penyakit Chart (Bar)
+    // Alat Kontrasepsi (Bar)
     const polaPenyakitChartOptions = {
         series: [{
-            name: '2023',
-            data: [150, 130, 90, 80, 60, 40, 20]
+            name: '2022',
+            data: [141, 50, 170, 16, 1, 14, 5, 2, 0]
         }, {
-            name: '2024',
-            data: [120, 100, 85, 95, 65, 30, 15]
+            name: '2023',
+            data: [110, 42, 195, 11, 0, 11, 3, 0, 3]
         }],
         chart: {
             type: 'bar',
@@ -1336,11 +1336,11 @@ function initializeKesehatanCharts() {
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['ISPA', 'Diare', 'Hipertensi', 'Diabetes', 'Gigi & Mulut', 'Kulit', 'Mata'],
+            categories: ['IUD', 'PIL', 'Suntik', 'Kondom', 'MOP', 'MOW', 'Implan', 'Intravag', 'Tradisional'],
         },
         yaxis: {
             title: {
-                text: 'Jumlah Kasus'
+                text: 'Jumlah Peserta KB Aktif'
             }
         },
         fill: {
