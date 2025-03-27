@@ -1,0 +1,773 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monografi Kelurahan Balonggede</title>
+    <link rel="stylesheet" href="monografi/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@4.0.0/dist/chart.min.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "chart.js": "https://cdn.jsdelivr.net/npm/chart.js@4.0.0/dist/chart.umd.min.js",
+            "leaflet": "https://unpkg.com/leaflet@1.9.4/dist/leaflet-src.esm.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <h1>Monografi Kelurahan Balonggede</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
+            <ul id="nav-menu">
+                <li><a href="#geografi" class="nav-link active">Geografi</a></li>
+                <li><a href="#pemerintahan" class="nav-link">Pemerintahan</a></li>
+                <li><a href="#demografi" class="nav-link">Demografi</a></li>
+                <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
+                <li><a href="#" class="nav-link">Lainnya</a>
+                    <ul>
+                        <li><a href="#kesehatan" class="nav-link">Kesehatan</a></li>
+                        <li><a href="#sosial" class="nav-link">Sosial Budaya</a></li>
+                        <li><a href="#pertanian" class="nav-link">Pertanian</a></li>
+                        <li><a href="#ekonomi" class="nav-link">Ekonomi</a></li>
+                        <li><a href="#pariwisata" class="nav-link">Pariwisata</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Kelurahan Balonggede</h2>
+                <p>Kecamatan Regol, Kota Bandung</p>
+                <div class="cta-buttons">
+                    <button id="explore-btn">Jelajahi Data</button>
+                    <button id="download-btn">Unduh Laporan</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="content-section">
+            <div class="card overview-card">
+                <h2>Ringkasan Monografi Desa</h2>
+                <p>Monografi desa adalah gambaran menyeluruh tentang kondisi desa yang mencakup berbagai aspek kehidupan masyarakat. Berikut adalah ringkasan data penting Kelurahan Balonggede:</p>
+                
+                <div class="overview-stats">
+                    <div class="stat-card">
+                        <i class="bi bi-people-fill"></i>
+                        <h3 id="total-penduduk">0</h3>
+                        <p>Penduduk</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="bi bi-rulers"></i>
+                        <h3 id="luas-wilayah">0</h3>
+                        <p>Luas Wilayah</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="bi bi-house-fill"></i>
+                        <h3 id="total-kk">0</h3>
+                        <p>Rumah Tangga</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="bi bi-building"></i>
+                        <h3 id="total-dusun">0</h3>
+                        <p>Dusun</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="geografi" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-geo-alt-fill"></i> Kondisi Geografi</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Peta Desa</h3>
+                    <div id="map" style="height: 400px;"></div>
+                </div>
+                <div class="card">
+                    <h3>Informasi Geografi</h3>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Luas Wilayah</div>
+                            <div class="info-value" id="luas-detail">3.25 km²</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Ketinggian</div>
+                            <div class="info-value">650 mdpl</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Batas Utara</div>
+                            <div class="info-value">Desa Cicalengka</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Batas Selatan</div>
+                            <div class="info-value">Desa Tenjolaya</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Batas Timur</div>
+                            <div class="info-value">Desa Waluya</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Batas Barat</div>
+                            <div class="info-value">Desa Cikancung</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Topografi</div>
+                            <div class="info-value">Berbukit dan Dataran</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Jarak ke Kecamatan</div>
+                            <div class="info-value">5.2 km</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Jarak ke Kabupaten</div>
+                            <div class="info-value">32.7 km</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Penggunaan Lahan</h3>
+                    <canvas id="lahan-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="pemerintahan" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-bank"></i> Pemerintahan</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Struktur Pemerintahan</h3>
+                    <div class="org-chart">
+                        <div class="org-tree">
+                            <div class="org-level level-1">
+                                <div class="org-member">
+                                    <div class="org-avatar">
+                                        <i class="bi bi-person-circle"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>Kepala Desa</h4>
+                                        <p>Bpk. Ahmad Suparman</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="org-level level-2">
+                                <div class="org-member">
+                                    <div class="org-avatar">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>Sekretaris Desa</h4>
+                                        <p>Ibu. Siti Aminah</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="org-level level-3">
+                                <div class="org-member">
+                                    <div class="org-avatar">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>Kaur Pemerintahan</h4>
+                                        <p>Bpk. Dedi Supriadi</p>
+                                    </div>
+                                </div>
+                                <div class="org-member">
+                                    <div class="org-avatar">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>Kaur Kesejahteraan</h4>
+                                        <p>Bpk. Asep Mulyana</p>
+                                    </div>
+                                </div>
+                                <div class="org-member">
+                                    <div class="org-avatar">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="org-info">
+                                        <h4>Kaur Pembangunan</h4>
+                                        <p>Bpk. Iman Sutisna</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Pembagian Wilayah</h3>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Jumlah Dusun</div>
+                            <div class="info-value">5 Dusun</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Jumlah RW</div>
+                            <div class="info-value">12 RW</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Jumlah RT</div>
+                            <div class="info-value">48 RT</div>
+                        </div>
+                    </div>
+                    <canvas id="wilayah-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Program Desa</h3>
+                    <div class="program-list">
+                        <div class="program-item">
+                            <div class="program-icon"><i class="bi bi-droplet-fill"></i></div>
+                            <div class="program-content">
+                                <h4>Pamsimas</h4>
+                                <p>Program penyediaan air bersih dan sanitasi</p>
+                            </div>
+                        </div>
+                        <div class="program-item">
+                            <div class="program-icon"><i class="bi bi-tree-fill"></i></div>
+                            <div class="program-content">
+                                <h4>Penghijauan</h4>
+                                <p>Program penanaman kembali lahan kritis</p>
+                            </div>
+                        </div>
+                        <div class="program-item">
+                            <div class="program-icon"><i class="bi bi-currency-dollar"></i></div>
+                            <div class="program-content">
+                                <h4>BUMDes</h4>
+                                <p>Pengembangan usaha ekonomi desa</p>
+                            </div>
+                        </div>
+                        <div class="program-item">
+                            <div class="program-icon"><i class="bi bi-house-heart-fill"></i></div>
+                            <div class="program-content">
+                                <h4>Bedah Rumah</h4>
+                                <p>Perbaikan rumah tidak layak huni</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demografi" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-people"></i> Demografi</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Distribusi Penduduk</h3>
+                    <canvas id="penduduk-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Piramida Penduduk</h3>
+                    <canvas id="piramida-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Data Kependudukan</h3>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Jumlah Penduduk</div>
+                            <div class="info-value">8,245 jiwa</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Jumlah KK</div>
+                            <div class="info-value">2,134 KK</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Kepadatan</div>
+                            <div class="info-value">2,537 jiwa/km²</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Rasio Jenis Kelamin</div>
+                            <div class="info-value">102.5</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Laju Pertumbuhan</div>
+                            <div class="info-value">1.2% per tahun</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Distribusi Agama</h3>
+                    <canvas id="agama-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-book"></i> Pendidikan</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Fasilitas Pendidikan</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>PAUD/TK</h4>
+                                <p>5 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>SD/MI</h4>
+                                <p>4 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>SMP/MTs</h4>
+                                <p>2 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>SMA/MA</h4>
+                                <p>1 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>Pesantren</h4>
+                                <p>3 unit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Tingkat Pendidikan</h3>
+                    <canvas id="pendidikan-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Angka Partisipasi Sekolah</h3>
+                    <canvas id="aps-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="kesehatan" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-heart-pulse"></i> Kesehatan</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Fasilitas Kesehatan</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-hospital"></i></div>
+                            <div class="facility-content">
+                                <h4>Puskesmas Pembantu</h4>
+                                <p>1 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-hospital"></i></div>
+                            <div class="facility-content">
+                                <h4>Posyandu</h4>
+                                <p>8 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-hospital"></i></div>
+                            <div class="facility-content">
+                                <h4>Praktek Dokter</h4>
+                                <p>2 orang</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-hospital"></i></div>
+                            <div class="facility-content">
+                                <h4>Bidan Desa</h4>
+                                <p>3 orang</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Status Gizi Balita</h3>
+                    <canvas id="gizi-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Imunisasi Dasar</h3>
+                    <canvas id="imunisasi-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="sosial" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-people-fill"></i> Sosial Budaya</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Kegiatan Budaya</h3>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-img">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="gallery-caption">
+                                <h4>Sedekah Bumi</h4>
+                                <p>Upacara adat tahunan sebagai bentuk syukur kepada alam</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-img">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="gallery-caption">
+                                <h4>Pencak Silat</h4>
+                                <p>Seni bela diri tradisional yang masih dilestarikan</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-img">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="gallery-caption">
+                                <h4>Festival Seni</h4>
+                                <p>Pertunjukan seni tradisional pada perayaan desa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Organisasi Sosial</h3>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Karang Taruna</div>
+                            <div class="info-value">1 unit</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">PKK</div>
+                            <div class="info-value">1 unit</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Kelompok Tani</div>
+                            <div class="info-value">5 unit</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Majlis Taklim</div>
+                            <div class="info-value">12 kelompok</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Kelompok Seni</div>
+                            <div class="info-value">3 kelompok</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Fasilitas Sosial</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>Masjid</h4>
+                                <p>12 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>Mushola</h4>
+                                <p>24 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>Balai Desa</h4>
+                                <p>1 unit</p>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <div class="facility-icon"><i class="bi bi-building"></i></div>
+                            <div class="facility-content">
+                                <h4>Lapangan Olahraga</h4>
+                                <p>3 unit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pertanian" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-tree"></i> Pertanian</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Produksi Pertanian</h3>
+                    <canvas id="produksi-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Luas Lahan Pertanian</h3>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Sawah Irigasi</div>
+                            <div class="info-value">125 Ha</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Sawah Tadah Hujan</div>
+                            <div class="info-value">75 Ha</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Perkebunan</div>
+                            <div class="info-value">85 Ha</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Kolam Ikan</div>
+                            <div class="info-value">15 Ha</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Komoditas Unggulan</h3>
+                    <div class="commodity-list">
+                        <div class="commodity-item">
+                            <div class="commodity-icon"><i class="bi bi-flower1"></i></div>
+                            <div class="commodity-content">
+                                <h4>Padi</h4>
+                                <p>Produksi: 850 ton/tahun</p>
+                            </div>
+                        </div>
+                        <div class="commodity-item">
+                            <div class="commodity-icon"><i class="bi bi-flower1"></i></div>
+                            <div class="commodity-content">
+                                <h4>Jagung</h4>
+                                <p>Produksi: 320 ton/tahun</p>
+                            </div>
+                        </div>
+                        <div class="commodity-item">
+                            <div class="commodity-icon"><i class="bi bi-flower1"></i></div>
+                            <div class="commodity-content">
+                                <h4>Kopi</h4>
+                                <p>Produksi: 65 ton/tahun</p>
+                            </div>
+                        </div>
+                        <div class="commodity-item">
+                            <div class="commodity-icon"><i class="bi bi-flower1"></i></div>
+                            <div class="commodity-content">
+                                <h4>Ikan Nila</h4>
+                                <p>Produksi: 45 ton/tahun</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ekonomi" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-cash-coin"></i> Ekonomi</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Mata Pencaharian</h3>
+                    <canvas id="pekerjaan-chart"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Kondisi Ekonomi</h3>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Keluarga Prasejahtera</div>
+                            <div class="info-value">425 KK (19.9%)</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Keluarga Sejahtera I</div>
+                            <div class="info-value">685 KK (32.1%)</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Keluarga Sejahtera II</div>
+                            <div class="info-value">728 KK (34.1%)</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Keluarga Sejahtera III</div>
+                            <div class="info-value">254 KK (11.9%)</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Keluarga Sejahtera III+</div>
+                            <div class="info-value">42 KK (2.0%)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Potensi Ekonomi</h3>
+                    <div class="economy-list">
+                        <div class="economy-item">
+                            <div class="economy-icon"><i class="bi bi-shop"></i></div>
+                            <div class="economy-content">
+                                <h4>UMKM</h4>
+                                <p>45 unit usaha</p>
+                            </div>
+                        </div>
+                        <div class="economy-item">
+                            <div class="economy-icon"><i class="bi bi-cart"></i></div>
+                            <div class="economy-content">
+                                <h4>Pasar Desa</h4>
+                                <p>1 unit (2x seminggu)</p>
+                            </div>
+                        </div>
+                        <div class="economy-item">
+                            <div class="economy-icon"><i class="bi bi-basket"></i></div>
+                            <div class="economy-content">
+                                <h4>Toko/Warung</h4>
+                                <p>68 unit</p>
+                            </div>
+                        </div>
+                        <div class="economy-item">
+                            <div class="economy-icon"><i class="bi bi-currency-exchange"></i></div>
+                            <div class="economy-content">
+                                <h4>Kelompok Arisan</h4>
+                                <p>24 kelompok</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pariwisata" class="content-section">
+            <div class="section-header">
+                <h2><i class="bi bi-binoculars"></i> Pariwisata</h2>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Destinasi Wisata</h3>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-img">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="gallery-caption">
+                                <h4>Curug Panenjoan</h4>
+                                <p>Air terjun alami dengan pemandangan indah</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-img">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="gallery-caption">
+                                <h4>Bukit Panyawangan</h4>
+                                <p>Lokasi dengan pemandangan matahari terbit yang indah</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-img">
+                                <i class="bi bi-image"></i>
+                            </div>
+                            <div class="gallery-caption">
+                                <h4>Agrowisata Kopi</h4>
+                                <p>Perkebunan kopi dengan edukasi tentang proses pengolahan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Produk Unggulan</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <div class="product-image placeholder-img">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <div class="product-info">
+                                <h4>Kopi Panenjoan</h4>
+                                <p>Kopi arabika khas dengan aroma dan rasa yang khas</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image placeholder-img">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <div class="product-info">
+                                <h4>Kerajinan Bambu</h4>
+                                <p>Berbagai kerajinan tangan dari bahan bambu lokal</p>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-image placeholder-img">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <div class="product-info">
+                                <h4>Dodol Tape</h4>
+                                <p>Makanan tradisional olahan dari bahan tape singkong</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Pengembangan Pariwisata</h3>
+                    <div class="plan-list">
+                        <div class="plan-item">
+                            <div class="plan-icon"><i class="bi bi-calendar-check"></i></div>
+                            <div class="plan-content">
+                                <h4>Festival Budaya Tahunan</h4>
+                                <p>Rencana pengembangan event tahunan untuk promosi desa</p>
+                            </div>
+                        </div>
+                        <div class="plan-item">
+                            <div class="plan-icon"><i class="bi bi-calendar-check"></i></div>
+                            <div class="plan-content">
+                                <h4>Pembangunan Homestay</h4>
+                                <p>Program pengembangan akomodasi berbasis masyarakat</p>
+                            </div>
+                        </div>
+                        <div class="plan-item">
+                            <div class="plan-icon"><i class="bi bi-calendar-check"></i></div>
+                            <div class="plan-content">
+                                <h4>Pelatihan Pemandu Wisata</h4>
+                                <p>Peningkatan kapasitas pemuda desa sebagai pemandu wisata</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kelurahan Balonggede</h3>
+                <p>Kecamatan Regol<br>Kota Bandung<br>Jawa Barat</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p><i class="bi bi-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0c68697f6d227c6d62696266636d624c6b616d6560226f6361">[email&#160;protected]</a></p>
+                <p><i class="bi bi-telephone"></i> (022) 7654321</p>
+            </div>
+            <div class="footer-section">
+                <h3>Media Sosial</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Monografi Kelurahan Balonggede. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="monografi/script.js"></script>
+</body>
+</html>

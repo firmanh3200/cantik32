@@ -486,7 +486,7 @@ function initializeCharts(year) {
             initializeKesehatanCharts();
         } else if (pageId === 'infrastruktur-page') {
             initializeInfrastrukturCharts();
-        } else if (pageId === 'monografi') {
+        } else if (pageId === 'monografi-page') {
             initializeIndustriCharts();
         } else if (pageId === 'publikasi-page') {
             initializePerdaganganCharts();
