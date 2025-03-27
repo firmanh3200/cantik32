@@ -72,9 +72,8 @@
                                     <li data-page="penduduk" class="dropdown-item"><i class="fas fa-users"></i> Penduduk</li>
                                     <li data-page="pendidikan" class="dropdown-item"><i class="fas fa-graduation-cap"></i> Pendidikan</li>
                                     <li data-page="kesehatan" class="dropdown-item"><i class="fas fa-medkit"></i> Kesehatan</li>
-                                    <li data-page="industri" class="dropdown-item"><i class="fas fa-industry"></i> Industri</li>
-                                    <li data-page="perdagangan" class="dropdown-item"><i class="fas fa-shopping-basket"></i> Perdagangan</li>
-                                    <li data-page="pariwisata" class="dropdown-item"><i class="fas fa-umbrella-beach"></i> Pariwisata</li>
+                                    <li data-page="monografi" class="dropdown-item"><i class="fas fa-industry"></i> Monografi</li>
+                                    <li data-page="publikasi" class="dropdown-item"><i class="fas fa-shopping-basket"></i> Statistik</li>
                                 </ul>
                             </div>
                         </div>
@@ -1092,88 +1091,17 @@
                     </footer>
                 </div>
 
-                <!-- Industri Page -->
-                <div class="page" id="industri-page">
+                <!-- monografi Page -->
+                <div class="page" id="monografi">
                     <header class="header">
                         <div class="header-title text-center">
-                            <h1>Bidang Industri</h1>
+                            <h1>Monografi Kelurahan</h1>
                         </div>
                     </header>
                     <br>
-                    <div class="ekonomi-highlight">
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Unit Usaha Industri</h3>
-                                <p class="value">42 Unit</p>
-                                <p class="trend positive">+15% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-money-bill-wave"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Nilai Produksi</h3>
-                                <p class="value">Rp 11.2 Miliar</p>
-                                <p class="trend positive">+18% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Tenaga Kerja</h3>
-                                <p class="value">550 Orang</p>
-                                <p class="trend positive">+12% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="stats-detail-grid">
-                        <div class="stats-detail-card">
-                            <h3>Distribusi Sektor Industri</h3>
-                            <div id="sektorIndustriChart" class="chart"></div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Pertumbuhan Industri</h3>
-                            <div id="pertumbuhanIndustriChart" class="chart"></div>
-                        </div>
-                    </div>
-
-                    <div class="stats-detail-grid">
-                        <div class="stats-detail-card col-span-2">
-                            <h3>Tenaga Kerja per Sektor</h3>
-                            <div id="tenagaKerjaIndustriChart" class="chart"></div>
-                        </div>
-                    </div>
-
                     <div class="datatable-section">
                         <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Daftar Unit Usaha Industri</h3>
-                                <div class="datatable-actions">
-                                    <button class="btn-primary"><i class="fas fa-plus"></i> Tambah Unit</button>
-                                </div>
-                            </div>
-                            <table id="industriTable" class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Usaha</th>
-                                        <th>Sektor</th>
-                                        <th>Omset Tahunan</th>
-                                        <th>Lokasi</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Data will be populated by JavaScript -->
-                                </tbody>
-                            </table>
+                            
                         </div>
                     </div>
 
@@ -1182,86 +1110,18 @@
                     </footer>
                 </div>
 
-                <!-- Perdagangan Page -->
-                <div class="page" id="perdagangan-page">
+                <!-- Publikassi Page -->
+                <div class="page" id="publikasi-page">
                     <header class="header">
                         <div class="header-title text-center">
-                            <h1>Bidang Perdagangan</h1>
+                            <h1>Statistik Kelurahan</h1>
                         </div>
                     </header>
                     <br>
-                    <div class="ekonomi-highlight">
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Volume Perdagangan</h3>
-                                <p class="value">Rp 5.2 Miliar</p>
-                                <p class="trend positive">+12.5% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Pertumbuhan Usaha</h3>
-                                <p class="value">37 Unit Baru</p>
-                                <p class="trend positive">+22% dari tahun sebelumnya</p>
-                            </div>
-                        </div>
-                        <div class="ekonomi-highlight-item">
-                            <div class="ekonomi-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="ekonomi-details">
-                                <h3>Transaksi Pasar</h3>
-                                <p class="value">89% Lokal</p>
-                                <p class="trend positive">Peningkatan Ekonomi Lokal</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="stats-detail-grid">
-                        <div class="stats-detail-card">
-                            <h3>Distribusi Komoditas</h3>
-                            <div id="komoditasChart" class="chart"></div>
-                        </div>
-                        <div class="stats-detail-card">
-                            <h3>Perkembangan Usaha Dagang</h3>
-                            <div id="usahaDagangChart" class="chart"></div>
-                        </div>
-                    </div>
-
                     <div class="datatable-section">
                         <div class="datatable-container">
-                            <div class="datatable-header">
-                                <h3>Pelaku Usaha Perdagangan</h3>
-                            </div>
-                            <table id="perdaganganTable" class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Usaha</th>
-                                        <th>Jenis Usaha</th>
-                                        <th>Omset Tahunan</th>
-                                        <th>Lokasi</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Data will be populated by JavaScript -->
-                                </tbody>
-                            </table>
+                            
                         </div>
-                    </div>
-
-                    <div class="chart-container">
-                        <div class="chart-header">
-                            <h3>Transaksi Perdagangan per Sektor</h3>
-                        </div>
-                        <div id="sektorPerdaganganChart" class="chart"></div>
                     </div>
 
                     <footer class="main-footer">
