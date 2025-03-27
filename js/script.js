@@ -1,15 +1,3 @@
-// biome-ignore lint/complexity/useArrowFunction: <explanation>
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.stickyheader');
-    const sticky = header.offsetTop; // Jarak header dari atas dokumen
-  
-    if (window.pageYOffset > sticky) {
-      header.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-    }
-  });
-  
 document.addEventListener('DOMContentLoaded', () => {
     // Page Navigation System
     const menuItems = document.querySelectorAll('.sidebar-dropdown .dropdown-item');

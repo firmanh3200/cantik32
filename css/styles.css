@@ -33,7 +33,7 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--gray-100);
+    background-color: rgb(255, 255, 255);
     color: var(--gray-800);
     line-height: 1.5;
 }
@@ -42,6 +42,7 @@ body {
 .dashboard-container {
     display: flex;
     min-height: 100vh;
+    background-color: rgb(255, 255, 255);
 }
 
 /* Sidebar Styles */
@@ -126,38 +127,28 @@ body {
     flex-grow: 1;
     padding: 1.5rem;
     overflow-x: hidden;
-}
-
-.row {
-    overflow: hidden; /* ATAU overflow: scroll */
+    background-color: rgb(255, 255, 255);
 }
 
 /* Header Styles */
 .main-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Penting untuk mencegah elemen lain menutupi header */
+    /* Remove position: sticky and top: 0 from here */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
-    background-color: white; 
+    /* margin-bottom: 1.5rem; */ /* Maybe remove margin if hr is outside */
+    /* background-color: var(--white); */ /* Inherited from stickyheader */
+    padding: 0.5rem 1.5rem; /* Add padding if needed */
+    left: 0;
+    background-color: rgb(255, 255, 255);
 }
 
 .stickyheader {
-    position: sticky;
-    top: 0; /* Atur jarak dari atas tempat elemen akan mulai "menempel" */
-    background-color: white; /* Penting untuk visibility saat scroll */
-    z-index: 100; /* Penting agar tidak tertutup elemen lain */
-}
-
-.stickyheader.sticky {
     position: fixed;
-    top: 0;
-    left: 0; /* Penting agar menempel di sisi kiri layar */
-    width: 100%; /* Penting agar lebar header tetap */
-    background-color: white;
-    z-index: 100;
+    top: 0; /* Sticks to the top of its container */
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000; /* Make sure it's above other content */
 }
 
 .header-title h1 {
@@ -239,7 +230,7 @@ margin: 0 5px; /* Tambahkan sedikit spasi di sekitar hati */
 .metric-card {
     background-color: var(--white);
     border-radius: 0.5rem;
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(0, 1, 14, 0.1);
     padding: 1.25rem;
     display: flex;
     gap: 1rem;
@@ -322,7 +313,7 @@ margin: 0 5px; /* Tambahkan sedikit spasi di sekitar hati */
 .chart-container {
     background-color: var(--white);
     border-radius: 0.5rem;
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(0, 1, 14, 0.1);
     padding: 1.25rem;
 }
 
@@ -424,17 +415,19 @@ margin: 0 5px; /* Tambahkan sedikit spasi di sekitar hati */
     text-align: center;
     border-top: 1px solid var(--gray-300);
     margin-top: 1.5rem;
+    color: rgb(0, 0, 0);
 }
 
 .main-footer p {
     font-size: 0.875rem;
-    color: var(--gray-600);
+    color: rgb(0, 0, 0);
     margin: 0;
 }
 
 /* Page System Styles */
 .pages-container {
     width: 100%;
+    padding-top: 75;
 }
 
 .page {
@@ -450,7 +443,7 @@ margin: 0 5px; /* Tambahkan sedikit spasi di sekitar hati */
 .stats-highlight-box {
     background-color: var(--white);
     border-radius: 0.5rem;
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(7, 7, 7, 0.1);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
 }
